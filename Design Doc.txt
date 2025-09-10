@@ -1,0 +1,93 @@
+Core Features:
+	1. Character Creation Wizard:
+		-Step by step forms for character creation. 
+		-Medium Effort, dependent on data models.
+	2. Character Editing Screen:
+		-Forms to update skills, spells, etc. with real time previews.
+		-Medium Effort, dependent on UI framework
+	3. Local Storage:
+		-Save/load characters from MSQL
+		-Low Effort, use Visual Studio tools for MSQL
+	4. Homebrew Support:
+		-Forms or fields for editing the data to change it or create custom stuff
+		-Medium Effort, depends on the flexibility of the schema
+Major Features:
+	1. Dice Roller:
+		-Integrated dice rolling
+		-Low Effort, just use Random class
+	2. Inventory Management:
+		-Screen for adding, removing items, tracking weight/encumberance, searchable list view
+		-Medium Effort, depends on character screen and SQL
+	3. Export/Import:
+		-Save as backups, or for sharing
+		-Low Effort, use library serialization
+Minor Features:
+	1. Validation Rules (follows D&D rulebook):
+		-Enforce DnD rules and add Override for homebrew
+		-Low-Medium Effort, integrate into forms
+	2. Dashboard:
+		-Home screen listing characters, modules, quick stat previews
+		-Low Effort, use DataGridView
+	3. Debug and Sample Data:
+		-Preloaded example characters for testing/new users
+		-Low Effort, no dependencies and core is complete
+	4. Future added games support:
+		-Add new Games/Modules
+		-Medium Effort, defer if needed
+
+Milestones:
+	1. Planning and Setup (Sept 10-30):
+		a. Setup GitHub repo, Visual studio solution, install Microsoft SQL server
+		b. Define data models (Classes, Weapons, Characters, etc.)
+	Goal: Project Foundation
+	Deliverable: Repo with skeleton code, team onboarded. 
+
+	2. Core UI and Data Layer (Oct 1-31):
+		a. Building forms for creating/editing
+		b. Implement MSQL
+		c. Add create/edit boxes for adding homebrew items (name, attack roll, AC bonus, etc.)
+		d. Prototype dashboard
+	Goal: Basic character creating/editing functional
+	Deliverable: Working prototype for D&D character basics (No Dice or Inventory yet). Test Saving/Loading
+
+	3. Major Features Integration (Nov 1-15):
+		a. Implement Dice Roller and integrate with character sheet.
+		b. Implement Inventory Screen and integrate with character sheet.
+		c. Add import export and basic validation (json, xml, etc.)
+	Goals: Add gameplay aids
+	Deliverable: End to end character management with tools, working demo.
+
+	4. Polish and Minor Features (Nov 16-30):
+		a. Implement minor features like theming, character samples
+		b. Bug fixes, unit testing, user testing
+	Goals: Refine UX and add extras
+	Deliverable: Beta release with all major and minor features. 
+
+	5. Final Testing and Release (Dec 1-7):
+		a. Full integration testing, edge-case handling
+		b. Package as installer (.exe)
+		c. Documentation for users
+	Goals: MVP ready for launch
+	Deliverable: Stable release on GitHub
+
+************************************************************************************************
+Tasks for Project Libre:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-Setup repo and solution
+-Define data models:
+	-Class
+	-Race
+	-Weapon
+	-Armor
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-Create forms for character creation
+-Create forms for character viewing/editing
+-Implement SQL within code
+-Implement extra form or fields for homebrew items
+-Implement dashboard for viewing characters, modules
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-Implement Dice Roller
+-Implement Inventory Management Form
+-Implement Inventory Management SQL
+-Implement Import/Export (json, xml, etc.)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
