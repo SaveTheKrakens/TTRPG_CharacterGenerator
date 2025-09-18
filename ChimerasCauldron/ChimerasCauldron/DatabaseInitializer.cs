@@ -28,6 +28,15 @@ namespace ChimerasCauldron
                         AbilityScoreIncrease TEXT,
                         Traits TEXT
                     );
+                    CREATE TABLE IF NOT EXISTS Classes (
+                        Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                        Name TEXT NOT NULL,
+                        Description TEXT,
+                        HitDie INTEGER,
+                        PrimaryAbility TEXT,
+                        SavingThrows TEXT,
+                        Skills TEXT
+                    );
                 ";
             createRacesCommand.ExecuteNonQuery();
         }
