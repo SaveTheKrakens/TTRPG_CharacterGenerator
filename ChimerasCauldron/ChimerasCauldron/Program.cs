@@ -10,8 +10,9 @@ namespace ChimerasCauldron
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
+            DatabaseInitializer.Initialize();
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            Application.Run(new Form_CharacterCreation());
         }
     }
 }

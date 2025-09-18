@@ -1,6 +1,6 @@
 ﻿namespace ChimerasCauldron
 {
-    partial class Form1
+    partial class Form_CharacterCreation
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,12 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            pnlRaceSelection = new Panel();
+            SuspendLayout();
+            // 
+            // pnlRaceSelection
+            // 
+            pnlRaceSelection.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            pnlRaceSelection.BackColor = SystemColors.ActiveCaption;
+            pnlRaceSelection.Location = new Point(60, 12);
+            pnlRaceSelection.Name = "pnlRaceSelection";
+            pnlRaceSelection.Size = new Size(804, 547);
+            pnlRaceSelection.TabIndex = 0;
+            // 
+            // Form_CharacterCreation
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Window;
+            ClientSize = new Size(926, 571);
+            Controls.Add(pnlRaceSelection);
+            Name = "Form_CharacterCreation";
+            Text = "Character Creation";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Panel pnlRaceSelection;
     }
 }
