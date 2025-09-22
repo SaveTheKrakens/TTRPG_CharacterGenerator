@@ -37,7 +37,25 @@ namespace ChimerasCauldron
         /*--GET THE CHARACTER PANEL TO STAY TO THE RIGHT THROUGHOUT CREATION----------------------------------------------------------------CHARACTER PANEL--*/
         private void ConfigureCharacterPanelWithMargin()
         {
-            
+            // Set anchor on top right and bottom to stick it to the side of the panel
+            pnl_CurrentCharacter.Anchor = AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Bottom;
+
+            // Set the initial location and margins
+            int topBottomMargin = 20;
+            int sideMargin = 180;
+            int minWidth = 200;
+            int maxWidth = 500;
+
+            pnl_CurrentCharacter.Location = new Point(this.ClientSize.Width - minWidth - sideMargin, topBottomMargin);
+            pnl_CurrentCharacter.Size = new Size(minWidth, this.ClientSize.Height - (4 * topBottomMargin));
+
+            // Handle resizing to maintain margins
+            this.Resize += (s, e) => 
+            {
+                int currentWidth = Math.Clamp(pnlRaceSelection.Width / 5, minWidth, maxWidth);
+                pnl_CurrentCharacter.Location = new Point(this.ClientSize.Width - currentWidth - sideMargin, topBottomMargin);
+                pnl_CurrentCharacter.Size = new Size(currentWidth, this.ClientSize.Height - 4 * topBottomMargin);
+            };
         }
 
         /*--SET UP THE BACK AND NEXT BUTTONS----------------------------------------------------------------------------------------------BACK NEXT BUTTONS--*/
@@ -57,6 +75,10 @@ namespace ChimerasCauldron
             btn_Next.Size = new Size(btnWidth, btnHeight);
             btn_Back.Location = new Point(5, vCenter);
             btn_Next.Location = new Point(this.ClientSize.Width - btnWidth - 5, vCenter);
+
+            // Placeholder button text 
+            btn_Back.Text = "<<<";
+            btn_Next.Text = ">>>";
         }
     }
 }
