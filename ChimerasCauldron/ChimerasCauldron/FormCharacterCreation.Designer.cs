@@ -28,22 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            pnlRaceSelection = new Panel();
+            pnlClassSelection = new Panel();
             pnl_CurrentCharacter = new Panel();
             btn_Back = new Button();
             btn_Next = new Button();
-            pnlRaceSelection.SuspendLayout();
+            cboxClassSelection = new ComboBox();
+            lblChooseClass = new Label();
+            pnlClassSelection.SuspendLayout();
             SuspendLayout();
             // 
-            // pnlRaceSelection
+            // pnlClassSelection
             // 
-            pnlRaceSelection.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            pnlRaceSelection.BackColor = SystemColors.ActiveCaption;
-            pnlRaceSelection.Controls.Add(pnl_CurrentCharacter);
-            pnlRaceSelection.Location = new Point(77, 12);
-            pnlRaceSelection.Name = "pnlRaceSelection";
-            pnlRaceSelection.Size = new Size(768, 547);
-            pnlRaceSelection.TabIndex = 0;
+            pnlClassSelection.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            pnlClassSelection.BackColor = SystemColors.ActiveCaption;
+            pnlClassSelection.Controls.Add(lblChooseClass);
+            pnlClassSelection.Controls.Add(cboxClassSelection);
+            pnlClassSelection.Controls.Add(pnl_CurrentCharacter);
+            pnlClassSelection.Location = new Point(77, 12);
+            pnlClassSelection.Name = "pnlClassSelection";
+            pnlClassSelection.Size = new Size(768, 547);
+            pnlClassSelection.TabIndex = 0;
             // 
             // pnl_CurrentCharacter
             // 
@@ -72,6 +76,23 @@
             btn_Next.Text = "button2";
             btn_Next.UseVisualStyleBackColor = true;
             // 
+            // cboxClassSelection
+            // 
+            cboxClassSelection.FormattingEnabled = true;
+            cboxClassSelection.Location = new Point(3, 35);
+            cboxClassSelection.Name = "cboxClassSelection";
+            cboxClassSelection.Size = new Size(121, 23);
+            cboxClassSelection.TabIndex = 1;
+            // 
+            // lblChooseClass
+            // 
+            lblChooseClass.AutoSize = true;
+            lblChooseClass.Location = new Point(3, 17);
+            lblChooseClass.Name = "lblChooseClass";
+            lblChooseClass.Size = new Size(77, 15);
+            lblChooseClass.TabIndex = 2;
+            lblChooseClass.Text = "Choose Class";
+            // 
             // Form_CharacterCreation
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -80,18 +101,21 @@
             ClientSize = new Size(926, 571);
             Controls.Add(btn_Next);
             Controls.Add(btn_Back);
-            Controls.Add(pnlRaceSelection);
+            Controls.Add(pnlClassSelection);
             Name = "Form_CharacterCreation";
             Text = "Character Creation";
-            pnlRaceSelection.ResumeLayout(false);
+            pnlClassSelection.ResumeLayout(false);
+            pnlClassSelection.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel pnlRaceSelection;
+        private Panel pnlClassSelection;
         private Panel pnl_CurrentCharacter;
         private Button btn_Back;
         private Button btn_Next;
+        private Label lblChooseClass;
+        private ComboBox cboxClassSelection;
     }
 }

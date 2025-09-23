@@ -1,3 +1,6 @@
+using Microsoft.Data.Sqlite;
+using System.ComponentModel;
+
 namespace ChimerasCauldron
 {
     public partial class Form_CharacterCreation : Form
@@ -7,9 +10,10 @@ namespace ChimerasCauldron
             InitializeComponent();
 
             /*--GET THE PANELS LAYOUT TO STAY IN THE CENTER------------------------------------------------------------------------------------------PANELS--*/
-            ConfigurePanelWithMargin(pnlRaceSelection, 80, 20);
+            ConfigurePanelWithMargin(pnlClassSelection, 80, 20);
             ConfigureCharacterPanelWithMargin();
             ConfigureButtons();
+            LoadComponents();
         }
 
         /*--HELPER FUNCTIONS-------------------------------------------------------------------------------------------------------------------------HELPER FUNCTIONS--*/
@@ -52,7 +56,7 @@ namespace ChimerasCauldron
             // Handle resizing to maintain margins
             this.Resize += (s, e) => 
             {
-                int currentWidth = Math.Clamp(pnlRaceSelection.Width / 5, minWidth, maxWidth);
+                int currentWidth = Math.Clamp(pnlClassSelection.Width / 5, minWidth, maxWidth);
                 pnl_CurrentCharacter.Location = new Point(this.ClientSize.Width - currentWidth - sideMargin, topBottomMargin);
                 pnl_CurrentCharacter.Size = new Size(currentWidth, this.ClientSize.Height - 4 * topBottomMargin);
             };
@@ -79,6 +83,22 @@ namespace ChimerasCauldron
             // Placeholder button text 
             btn_Back.Text = "<<<";
             btn_Next.Text = ">>>";
+        }
+
+        /*--SET UP COMPONENTS THAT USE SQLITE--------------------------------------------------------------------------------------------------------SQLITE--*/
+        private void LoadComponents()
+        {
+            using SqliteConnection connection = new SqliteConnection("Data Source=chimeras.db");
+            connection.Open();
+
+            using SqliteCommand command = connection.CreateCommand();
+            command.CommandText = "SELECT name FROM Classes";
+
+            using SqliteDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                cboxClassSelection.Items.Add(reader.GetString(0));
+            }
         }
     }
 }
