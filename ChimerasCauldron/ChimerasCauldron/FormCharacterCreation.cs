@@ -88,6 +88,8 @@ namespace ChimerasCauldron
         /*--SET UP COMPONENTS THAT USE SQLITE--------------------------------------------------------------------------------------------------------SQLITE--*/
         private void LoadComponents()
         {
+            cboxClassSelection.Text = "Choose Class";
+
             using SqliteConnection connection = new SqliteConnection("Data Source=chimeras.db");
             connection.Open();
 
