@@ -90,4 +90,7 @@ Tasks for Project Libre:
 -Implement Inventory Management Form
 -Implement Inventory Management SQL
 -Implement Import/Export (json, xml, etc.)
+
+https://github.com/5etools-mirror-3/5etools-src/releases/tag/v2.12.0
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
