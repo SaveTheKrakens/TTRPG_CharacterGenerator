@@ -1,6 +1,6 @@
 ﻿namespace ChimerasCauldron
 {
-    partial class Form_CharacterCreation
+    partial class formDndCharacterCreation
     {
         /// <summary>
         ///  Required designer variable.
@@ -95,7 +95,7 @@
             btn_Next.UseVisualStyleBackColor = true;
             btn_Next.Click += btn_Next_Click;
             // 
-            // Form_CharacterCreation
+            // formDndCharacterCreation
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -104,7 +104,7 @@
             Controls.Add(btn_Next);
             Controls.Add(btn_Back);
             Controls.Add(pnlClassSelection);
-            Name = "Form_CharacterCreation";
+            Name = "formDndCharacterCreation";
             Text = "Character Creation";
             pnlClassSelection.ResumeLayout(false);
             pnlClassSelection.PerformLayout();

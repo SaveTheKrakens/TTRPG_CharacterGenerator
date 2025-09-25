@@ -3,9 +3,9 @@ using System.ComponentModel;
 
 namespace ChimerasCauldron
 {
-    public partial class Form_CharacterCreation : Form
+    public partial class formDndCharacterCreation : Form
     {
-        public Form_CharacterCreation()
+        public formDndCharacterCreation()
         {
             InitializeComponent();
 
