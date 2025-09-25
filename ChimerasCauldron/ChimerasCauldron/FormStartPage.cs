@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace ChimerasCauldron
 {
-    public partial class frmStartPage : Form
+    public partial class FrmStartPage : Form
     {
         // Add new modules as we make them
         string[] modules =
         {
             "Dungeons and Dragons 5e"
         };
-        public frmStartPage()
+        public FrmStartPage()
         {
             InitializeComponent();
             InitializeComboBox();
@@ -33,9 +33,9 @@ namespace ChimerasCauldron
         {
             if(cBoxModules.SelectedIndex == 0)
             {
-                Form formCharacterCreation = new formDndCharacterCreation();
-                formCharacterCreation.Show();
-                this.Hide();
+                Form formCharacterCreation = new FormDndCharacterCreation();
+                formCharacterCreation.ShowDialog();
+                
             }
         }
 

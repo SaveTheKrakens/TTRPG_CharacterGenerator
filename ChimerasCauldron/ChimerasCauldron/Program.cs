@@ -14,7 +14,7 @@ namespace ChimerasCauldron
             // see https://aka.ms/applicationconfiguration.
             DatabaseInitializer.Initialize();
             ApplicationConfiguration.Initialize();
-            Application.Run(new frmStartPage());
+            Application.Run(new FrmStartPage());
         }
     }
 }

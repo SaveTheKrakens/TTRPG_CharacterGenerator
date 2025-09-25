@@ -3,9 +3,9 @@ using System.ComponentModel;
 
 namespace ChimerasCauldron
 {
-    public partial class formDndCharacterCreation : Form
+    public partial class FormDndCharacterCreation : Form
     {
-        public formDndCharacterCreation()
+        public FormDndCharacterCreation()
         {
             InitializeComponent();
 
@@ -112,6 +112,11 @@ namespace ChimerasCauldron
         private void btn_Next_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ShowStartForm(object sender, FormClosedEventArgs e)
+        {
+            
         }
     }
 }

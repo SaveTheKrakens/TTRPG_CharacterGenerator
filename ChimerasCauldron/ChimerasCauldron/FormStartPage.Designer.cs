@@ -1,6 +1,6 @@
 ﻿namespace ChimerasCauldron
 {
-    partial class frmStartPage
+    partial class FrmStartPage
     {
         /// <summary>
         /// Required designer variable.
