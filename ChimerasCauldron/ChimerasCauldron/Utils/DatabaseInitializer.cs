@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 // THIS FILE GETS CALLED WITHIN THE PROGRAM.CS FILE
-namespace ChimerasCauldron
+namespace ChimerasCauldron.Utils
 {
     internal class DatabaseInitializer
     {

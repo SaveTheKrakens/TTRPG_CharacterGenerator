@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             pnlClassSelection = new Panel();
+            lblChooseClass = new Label();
+            cboxClassSelection = new ComboBox();
             pnl_CurrentCharacter = new Panel();
             btn_Back = new Button();
             btn_Next = new Button();
-            cboxClassSelection = new ComboBox();
-            lblChooseClass = new Label();
             pnlClassSelection.SuspendLayout();
             SuspendLayout();
             // 
@@ -48,6 +48,23 @@
             pnlClassSelection.Name = "pnlClassSelection";
             pnlClassSelection.Size = new Size(768, 547);
             pnlClassSelection.TabIndex = 0;
+            // 
+            // lblChooseClass
+            // 
+            lblChooseClass.AutoSize = true;
+            lblChooseClass.Location = new Point(3, 17);
+            lblChooseClass.Name = "lblChooseClass";
+            lblChooseClass.Size = new Size(77, 15);
+            lblChooseClass.TabIndex = 2;
+            lblChooseClass.Text = "Choose Class";
+            // 
+            // cboxClassSelection
+            // 
+            cboxClassSelection.FormattingEnabled = true;
+            cboxClassSelection.Location = new Point(3, 35);
+            cboxClassSelection.Name = "cboxClassSelection";
+            cboxClassSelection.Size = new Size(121, 23);
+            cboxClassSelection.TabIndex = 1;
             // 
             // pnl_CurrentCharacter
             // 
@@ -66,6 +83,7 @@
             btn_Back.TabIndex = 1;
             btn_Back.Text = "button1";
             btn_Back.UseVisualStyleBackColor = true;
+            btn_Back.Click += btn_Back_Click;
             // 
             // btn_Next
             // 
@@ -75,23 +93,7 @@
             btn_Next.TabIndex = 2;
             btn_Next.Text = "button2";
             btn_Next.UseVisualStyleBackColor = true;
-            // 
-            // cboxClassSelection
-            // 
-            cboxClassSelection.FormattingEnabled = true;
-            cboxClassSelection.Location = new Point(3, 35);
-            cboxClassSelection.Name = "cboxClassSelection";
-            cboxClassSelection.Size = new Size(121, 23);
-            cboxClassSelection.TabIndex = 1;
-            // 
-            // lblChooseClass
-            // 
-            lblChooseClass.AutoSize = true;
-            lblChooseClass.Location = new Point(3, 17);
-            lblChooseClass.Name = "lblChooseClass";
-            lblChooseClass.Size = new Size(77, 15);
-            lblChooseClass.TabIndex = 2;
-            lblChooseClass.Text = "Choose Class";
+            btn_Next.Click += btn_Next_Click;
             // 
             // Form_CharacterCreation
             // 

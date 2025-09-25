@@ -26,14 +26,14 @@ namespace ChimerasCauldron
             // Set initial location and size with margins
             panel.Location = new Point(sideMargin, topBottomMargin);
             panel.Size = new Size(
-                this.ClientSize.Width - 2 * sideMargin, 
+                this.ClientSize.Width - 2 * sideMargin,
                 this.ClientSize.Height - 2 * topBottomMargin);
 
             // Handle resizing to maintain margins
             this.Resize += (s, e) =>
             {
                 panel.Size = new Size(
-                    this.ClientSize.Width - 2 * sideMargin, 
+                    this.ClientSize.Width - 2 * sideMargin,
                     this.ClientSize.Height - 2 * topBottomMargin);
             };
         }
@@ -54,7 +54,7 @@ namespace ChimerasCauldron
             pnl_CurrentCharacter.Size = new Size(minWidth, this.ClientSize.Height - (4 * topBottomMargin));
 
             // Handle resizing to maintain margins
-            this.Resize += (s, e) => 
+            this.Resize += (s, e) =>
             {
                 int currentWidth = Math.Clamp(pnlClassSelection.Width / 5, minWidth, maxWidth);
                 pnl_CurrentCharacter.Location = new Point(this.ClientSize.Width - currentWidth - sideMargin, topBottomMargin);
@@ -101,6 +101,17 @@ namespace ChimerasCauldron
             {
                 cboxClassSelection.Items.Add(reader.GetString(0));
             }
+        }
+
+        /*--BUTTON CLICKS---------------------------------------------------------------------------------------------------------------------BUTTON CLICKS--*/
+        private void btn_Back_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Next_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
