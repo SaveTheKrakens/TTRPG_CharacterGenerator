@@ -34,6 +34,8 @@
             pnl_CurrentCharacter = new Panel();
             btn_Back = new Button();
             btn_Next = new Button();
+            btnAccept = new Button();
+            btnCancel = new Button();
             pnlClassSelection.SuspendLayout();
             SuspendLayout();
             // 
@@ -41,6 +43,8 @@
             // 
             pnlClassSelection.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pnlClassSelection.BackColor = SystemColors.ActiveCaption;
+            pnlClassSelection.Controls.Add(btnCancel);
+            pnlClassSelection.Controls.Add(btnAccept);
             pnlClassSelection.Controls.Add(lblChooseClass);
             pnlClassSelection.Controls.Add(cboxClassSelection);
             pnlClassSelection.Controls.Add(pnl_CurrentCharacter);
@@ -95,6 +99,26 @@
             btn_Next.UseVisualStyleBackColor = true;
             btn_Next.Click += btn_Next_Click;
             // 
+            // btnAccept
+            // 
+            btnAccept.Location = new Point(154, 461);
+            btnAccept.Name = "btnAccept";
+            btnAccept.Size = new Size(75, 23);
+            btnAccept.TabIndex = 3;
+            btnAccept.Text = "&Accept";
+            btnAccept.UseVisualStyleBackColor = true;
+            btnAccept.Click += btnAccept_Click;
+            // 
+            // btnCancel
+            // 
+            btnCancel.Location = new Point(362, 458);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(75, 23);
+            btnCancel.TabIndex = 4;
+            btnCancel.Text = "&Cancel";
+            btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.Click += btnCancel_Click;
+            // 
             // FormDndCharacterCreation
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -120,5 +144,7 @@
         private Button btn_Next;
         private Label lblChooseClass;
         private ComboBox cboxClassSelection;
+        private Button btnCancel;
+        private Button btnAccept;
     }
 }

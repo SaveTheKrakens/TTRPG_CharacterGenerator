@@ -116,7 +116,19 @@ namespace ChimerasCauldron
 
         private void ShowStartForm(object sender, FormClosedEventArgs e)
         {
-            
+
+        }
+
+        private void btnAccept_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
+            this.Close();
         }
     }
 }
