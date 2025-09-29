@@ -129,7 +129,7 @@ namespace ChimerasCauldron.Utils
 
                 -- ADDING ARTIFICER ------------------------------------------------------------
                 INSERT INTO Classes (
-                    Id, 
+                    Class_Id, 
                     Name, 
                     Description, 
                     Hit_Dice,
@@ -137,7 +137,8 @@ namespace ChimerasCauldron.Utils
                     Spellcasting_Ability,
                     Prepared_Spells, 
                     Prepared_Spells_Change, 
-                    Cantrip_Progression
+                    Cantrip_Progression,
+                    Equipment
                 ) VALUES (
                     1,
                     ""Artificer"",
@@ -153,7 +154,7 @@ namespace ChimerasCauldron.Utils
 
                 -- ADDING BARBARIAN ------------------------------------------------------------
                 INSERT INTO Classes (
-                    Id, 
+                    Class_Id, 
                     Name, 
                     Description, 
                     Hit_Dice,
@@ -161,7 +162,8 @@ namespace ChimerasCauldron.Utils
                     Spellcasting_Ability,
                     Prepared_Spells, 
                     Prepared_Spells_Change, 
-                    Cantrip_Progression
+                    Cantrip_Progression,
+                    Equipment
                 ) VALUES (
                     2,
                     ""Barbarian"",
@@ -177,7 +179,7 @@ namespace ChimerasCauldron.Utils
 
                 -- BARD ------------------------------------------------------------------------
                 INSERT INTO Classes (
-                    Id, 
+                    Class_Id, 
                     Name, 
                     Description, 
                     Hit_Dice,
@@ -185,7 +187,8 @@ namespace ChimerasCauldron.Utils
                     Spellcasting_Ability,
                     Prepared_Spells, 
                     Prepared_Spells_Change, 
-                    Cantrip_Progression
+                    Cantrip_Progression,
+                    Equipment
                 ) VALUES (
                     3,
                     ""Bard"",
@@ -201,7 +204,7 @@ namespace ChimerasCauldron.Utils
 
                 -- ADDING CLERIC --------------------------------------------------------------
                 INSERT INTO Classes (
-                    Id, 
+                    Class_Id, 
                     Name, 
                     Description, 
                     Hit_Dice,
@@ -209,7 +212,8 @@ namespace ChimerasCauldron.Utils
                     Spellcasting_Ability,
                     Prepared_Spells, 
                     Prepared_Spells_Change, 
-                    Cantrip_Progression
+                    Cantrip_Progression,
+                    Equipment
                 ) VALUES (
                     4,
                     ""Cleric"",
@@ -225,7 +229,7 @@ namespace ChimerasCauldron.Utils
 
                 -- ADDING DRUID ----------------------------------------------------------------
                 INSERT INTO Classes (
-                    Id, 
+                    Class_Id, 
                     Name, 
                     Description, 
                     Hit_Dice,
@@ -233,7 +237,8 @@ namespace ChimerasCauldron.Utils
                     Spellcasting_Ability,
                     Prepared_Spells, 
                     Prepared_Spells_Change, 
-                    Cantrip_Progression
+                    Cantrip_Progression,
+                    Equipment
                 ) VALUES (
                     5,
                     ""Druid"",
@@ -249,7 +254,7 @@ namespace ChimerasCauldron.Utils
 
                 -- ADDING FIGHTER --------------------------------------------------------------
                 INSERT INTO Classes (
-                    Id, 
+                    Class_Id, 
                     Name, 
                     Description, 
                     Hit_Dice,
@@ -257,7 +262,8 @@ namespace ChimerasCauldron.Utils
                     Spellcasting_Ability,
                     Prepared_Spells, 
                     Prepared_Spells_Change, 
-                    Cantrip_Progression
+                    Cantrip_Progression,
+                    Equipment
                 ) VALUES (
                     6,
                     ""Fighter"",
@@ -273,7 +279,7 @@ namespace ChimerasCauldron.Utils
 
                 -- ADDING MONK -----------------------------------------------------------------
                 INSERT INTO Classes (
-                    Id, 
+                    Class_Id, 
                     Name, 
                     Description, 
                     Hit_Dice,
@@ -281,7 +287,8 @@ namespace ChimerasCauldron.Utils
                     Spellcasting_Ability,
                     Prepared_Spells, 
                     Prepared_Spells_Change, 
-                    Cantrip_Progression
+                    Cantrip_Progression,
+                    Equipment
                 ) VALUES (
                     7,
                     ""Monk"",
@@ -297,7 +304,7 @@ namespace ChimerasCauldron.Utils
 
                 -- ADDING PALADIN --------------------------------------------------------------
                 INSERT INTO Classes (
-                    Id, 
+                    Class_Id, 
                     Name, 
                     Description, 
                     Hit_Dice,
@@ -305,7 +312,8 @@ namespace ChimerasCauldron.Utils
                     Spellcasting_Ability,
                     Prepared_Spells, 
                     Prepared_Spells_Change, 
-                    Cantrip_Progression
+                    Cantrip_Progression,
+                    Equipment
                 ) VALUES (
                     8,
                     ""Paladin"",
@@ -321,7 +329,7 @@ namespace ChimerasCauldron.Utils
 
                 -- ADDING RANGER ---------------------------------------------------------------
                 INSERT INTO Classes (
-                    Id, 
+                    Class_Id, 
                     Name, 
                     Description, 
                     Hit_Dice,
@@ -329,7 +337,8 @@ namespace ChimerasCauldron.Utils
                     Spellcasting_Ability,
                     Prepared_Spells, 
                     Prepared_Spells_Change, 
-                    Cantrip_Progression
+                    Cantrip_Progression,
+                    Equipment
                 ) VALUES (
                     9,
                     ""Ranger"",
@@ -345,7 +354,7 @@ namespace ChimerasCauldron.Utils
 
                 -- ADDING ROGUE ----------------------------------------------------------------
                 INSERT INTO Classes (
-                    Id, 
+                    Class_Id, 
                     Name, 
                     Description, 
                     Hit_Dice,
@@ -353,7 +362,8 @@ namespace ChimerasCauldron.Utils
                     Spellcasting_Ability,
                     Prepared_Spells, 
                     Prepared_Spells_Change, 
-                    Cantrip_Progression
+                    Cantrip_Progression,
+                    Equipment
                 ) VALUES (
                     10,
                     ""Rogue"",
@@ -369,7 +379,7 @@ namespace ChimerasCauldron.Utils
 
                 -- ADDING SORCERER -------------------------------------------------------------
                 INSERT INTO Classes (
-                    Id, 
+                    Class_Id, 
                     Name, 
                     Description, 
                     Hit_Dice,
@@ -377,7 +387,8 @@ namespace ChimerasCauldron.Utils
                     Spellcasting_Ability,
                     Prepared_Spells, 
                     Prepared_Spells_Change, 
-                    Cantrip_Progression
+                    Cantrip_Progression,
+                    Equipment
                 ) VALUES (
                     11,
                     ""Sorcerer"",
@@ -393,7 +404,7 @@ namespace ChimerasCauldron.Utils
 
                 -- ADDING WARLOCK --------------------------------------------------------------
                 INSERT INTO Classes (
-                    Id, 
+                    Class_Id, 
                     Name, 
                     Description, 
                     Hit_Dice,
@@ -401,7 +412,8 @@ namespace ChimerasCauldron.Utils
                     Spellcasting_Ability,
                     Prepared_Spells, 
                     Prepared_Spells_Change, 
-                    Cantrip_Progression
+                    Cantrip_Progression,
+                    Equipment
                 ) VALUES (
                     12,
                     ""Warlock"",
@@ -417,7 +429,7 @@ namespace ChimerasCauldron.Utils
 
                 -- ADDING WIZARD ---------------------------------------------------------------
                 INSERT INTO Classes (
-                    Id, 
+                    Class_Id, 
                     Name, 
                     Description, 
                     Hit_Dice,
@@ -425,7 +437,8 @@ namespace ChimerasCauldron.Utils
                     Spellcasting_Ability,
                     Prepared_Spells, 
                     Prepared_Spells_Change, 
-                    Cantrip_Progression
+                    Cantrip_Progression,
+                    Equipment
                 ) VALUES (
                     13,
                     ""Wizard"",
