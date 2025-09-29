@@ -37,15 +37,25 @@ namespace ChimerasCauldron.Utils
                     Name TEXT NOT NULL,
                     LEVEL INTEGER NOT NULL,
                     RACE_ID TEXT NOT NULL,
+                    SIZE TEXT NOT NULL,
+                    SPEED INTEGER NOT NULL,
+                    DARKVISION BOOLEAN NOT NULL,
                     CLASS_ID TEXT NOT NULL,
+                    PROFICIENCY TEXT NOT NULL,
                     BACKGROUND_ID TEXT NOT NULL,
-                    ABILITY_SCORES_ID INTEGER,
+                    SKILL_PROFICIENCIES TEXT NOT NULL,
+                    ABILITY_SCORES_ID INTEGER NOT NULL,
                     ITEMS_ID INTEGER,
-                    Foreign KEY (RACE_ID) REFERENCES Races(Race_Id),
-                    FOREIGN KEY (CLASS_ID) REFERENCES Classes(Class_Id),
-                    FOREIGN KEY (BACKGROUND_ID) REFERENCES Backgrounds(Background_Id),
-                    FOREIGN KEY (ABILITY_SCORES_ID) REFERENCES Ability_Scores(Ability_Score_Id),
-                    FOREIGN KEY (ITEMS_ID) REFERENCES Items(Item_Id)
+                    FOREIGN KEY (RACE_ID) REFERENCES RACES(Race_Id),
+                    FOREIGN KEY (SIZE) REFERENCES RACES(Size),
+                    FOREIGN KEY (SPEED) REFERENCES RACES(Speed),
+                    FOREIGN KEY (DARKVISION) REFERENCES RACES(Darkvision),
+                    FOREIGN KEY (CLASS_ID) REFERENCES CLASSES(Class_Id),
+                    FOREIGN KEY (PROFICIENCY) REFERENCES CLASSES(Proficiency),
+                    FOREIGN KEY (BACKGROUND_ID) REFERENCES BACKGROUNDS(Background_Id),
+                    FOREIGN KEY (SKILL_PROFICIENCIES) REFERENCES BACKGROUNDS(Skill_Proficiencies),
+                    FOREIGN KEY (ABILITY_SCORES_ID) REFERENCES ABILITY_SCORES(Ability_Score_Id),
+                    FOREIGN KEY (ITEMS_ID) REFERENCES ITEMS(Item_Id)
                 );
 
                 -- Create Races TABLE
@@ -63,8 +73,7 @@ namespace ChimerasCauldron.Utils
 
                 -- Create Background TABLE
                 CREATE TABLE IF NOT EXISTS Backgrounds (
-                    Background_Id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    Name TEXT NOT NULL,
+                    Name TEXT NOT NULL PRIMARY KEY,
                     Description TEXT NOT NULL,
                     Ability_Score_Modifier TEXT NOT NULL,
                     Skill_Proficiencies TEXT NOT NULL,
@@ -88,16 +97,14 @@ namespace ChimerasCauldron.Utils
                 -- Create Items TABLE
                 CREATE TABLE IF NOT EXISTS Items (
                     Item_Id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    Equipment_Id INTEGER,
-                    Magic_Item_Id INTEGER,
-                    FOREIGN KEY (Equipment_Id) REFERENCES Equipment(Equipment_Id),
-                    FOREIGN KEY (Magic_Item_Id) REFERENCES Magic_Items(Magic_Item_Id)
+                    NAME TEXT NOT NULL,
+                    FOREIGN KEY (NAME) REFERENCES Equipment(NAME),
+                    FOREIGN KEY (NAME) REFERENCES Magic_Items(NAME)
                 );
 
                 -- Create Equipment TABLE
                 CREATE TABLE IF NOT EXISTS Equipment (
-                    Equipment_Id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    Name TEXT NOT NULL,
+                    Name TEXT NOT NULL PRIMARY KEY,
                     Type TEXT NOT NULL,
                     Cost INTEGER NOT NULL,
                     Weight REAL NOT NULL,
@@ -106,8 +113,7 @@ namespace ChimerasCauldron.Utils
 
                 -- Create Magic Items TABLE
                 CREATE TABLE IF NOT EXISTS Magic_Items (
-                    Magic_Item_Id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    Name TEXT NOT NULL,
+                    Name TEXT NOT NULL PRIMARY KEY,
                     Description TEXT NOT NULL,
                     Rarity TEXT NOT NULL,
                     Requires_Attunement BOOLEAN NOT NULL
