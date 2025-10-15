@@ -1,4 +1,4 @@
-using ChimerasCauldron.Core.DND;
+using ChimerasCauldron.Forms;
 using Microsoft.Data.Sqlite;
 using System.ComponentModel;
 
@@ -118,31 +118,15 @@ namespace ChimerasCauldron
         }
 
         /*--BUTTON CLICKS---------------------------------------------------------------------------------------------------------------------BUTTON CLICKS--*/
-        private void btn_Back_Click(object sender, EventArgs e)
+        private void ShowStartForm(object sender, FormClosedEventArgs e)
         {
 
         }
 
         private void btn_Next_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void ShowStartForm(object sender, FormClosedEventArgs e)
-        {
-
-        }
-
-        private void btnAccept_Click(object sender, EventArgs e)
-        {
-            DialogResult = DialogResult.OK;
-            this.Close();
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            DialogResult = DialogResult.Cancel;
-            this.Close();
+            Form proficiency = new ProficiencyChoices();
+            proficiency.ShowDialog();
         }
         
     }
