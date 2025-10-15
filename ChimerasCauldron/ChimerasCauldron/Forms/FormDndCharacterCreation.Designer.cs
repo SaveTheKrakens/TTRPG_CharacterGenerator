@@ -29,17 +29,10 @@
         private void InitializeComponent()
         {
             pnlClassSelection = new Panel();
-            label1 = new Label();
-            cboxBackgroundSelection = new ComboBox();
-            cboxRaceSelection = new ComboBox();
-            lblChooseRace = new Label();
             lblChooseClass = new Label();
             cboxClassSelection = new ComboBox();
             pnl_CurrentCharacter = new Panel();
             btn_Next = new Button();
-            btn_Back = new Button();
-            txtCharacterName = new TextBox();
-            lblCharacterName = new Label();
             pnlClassSelection.SuspendLayout();
             SuspendLayout();
             // 
@@ -60,40 +53,6 @@
             pnlClassSelection.Name = "pnlClassSelection";
             pnlClassSelection.Size = new Size(751, 547);
             pnlClassSelection.TabIndex = 0;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(448, 18);
-            label1.Name = "label1";
-            label1.Size = new Size(114, 15);
-            label1.TabIndex = 8;
-            label1.Text = "Choose Background";
-            // 
-            // cboxBackgroundSelection
-            // 
-            cboxBackgroundSelection.FormattingEnabled = true;
-            cboxBackgroundSelection.Location = new Point(448, 36);
-            cboxBackgroundSelection.Name = "cboxBackgroundSelection";
-            cboxBackgroundSelection.Size = new Size(121, 23);
-            cboxBackgroundSelection.TabIndex = 7;
-            // 
-            // cboxRaceSelection
-            // 
-            cboxRaceSelection.FormattingEnabled = true;
-            cboxRaceSelection.Location = new Point(222, 36);
-            cboxRaceSelection.Name = "cboxRaceSelection";
-            cboxRaceSelection.Size = new Size(121, 23);
-            cboxRaceSelection.TabIndex = 6;
-            // 
-            // lblChooseRace
-            // 
-            lblChooseRace.AutoSize = true;
-            lblChooseRace.Location = new Point(222, 18);
-            lblChooseRace.Name = "lblChooseRace";
-            lblChooseRace.Size = new Size(75, 15);
-            lblChooseRace.TabIndex = 5;
-            lblChooseRace.Text = "Choose Race";
             // 
             // lblChooseClass
             // 
@@ -142,19 +101,13 @@
             // 
             // txtCharacterName
             // 
-            txtCharacterName.Location = new Point(3, 113);
-            txtCharacterName.Name = "txtCharacterName";
-            txtCharacterName.Size = new Size(206, 23);
-            txtCharacterName.TabIndex = 9;
-            // 
-            // lblCharacterName
-            // 
-            lblCharacterName.AutoSize = true;
-            lblCharacterName.Location = new Point(3, 95);
-            lblCharacterName.Name = "lblCharacterName";
-            lblCharacterName.Size = new Size(93, 15);
-            lblCharacterName.TabIndex = 10;
-            lblCharacterName.Text = "Character Name";
+            btn_Next.Location = new Point(860, 260);
+            btn_Next.Name = "btn_Next";
+            btn_Next.Size = new Size(75, 23);
+            btn_Next.TabIndex = 2;
+            btn_Next.Text = "button2";
+            btn_Next.UseVisualStyleBackColor = true;
+            btn_Next.Click += btn_Next_Click;
             // 
             // FormDndCharacterCreation
             // 
