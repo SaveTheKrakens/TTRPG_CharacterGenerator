@@ -6,5 +6,20 @@
     "**/node_modules",
     "**/obj",
     "**/platforms"
+  ],
+
+  "classinfo": [
+    {
+      "name": "Artificer",
+      "hd": {
+        "number": 1,
+        "faces": 8
+      },
+      "proficiency": [
+        "con",
+        "int"
+      ],
+      "spellcastingability": "int"
+    }
   ]
 }

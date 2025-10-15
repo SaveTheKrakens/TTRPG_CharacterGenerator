@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             pnlClassSelection = new Panel();
+            btnCancel = new Button();
+            btnAccept = new Button();
             lblChooseClass = new Label();
             cboxClassSelection = new ComboBox();
             pnl_CurrentCharacter = new Panel();
             btn_Back = new Button();
             btn_Next = new Button();
-            btnAccept = new Button();
-            btnCancel = new Button();
             pnlClassSelection.SuspendLayout();
             SuspendLayout();
             // 
@@ -52,6 +52,26 @@
             pnlClassSelection.Name = "pnlClassSelection";
             pnlClassSelection.Size = new Size(768, 547);
             pnlClassSelection.TabIndex = 0;
+            // 
+            // btnCancel
+            // 
+            btnCancel.Location = new Point(362, 458);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(75, 23);
+            btnCancel.TabIndex = 4;
+            btnCancel.Text = "&Cancel";
+            btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.Click += btnCancel_Click;
+            // 
+            // btnAccept
+            // 
+            btnAccept.Location = new Point(154, 461);
+            btnAccept.Name = "btnAccept";
+            btnAccept.Size = new Size(75, 23);
+            btnAccept.TabIndex = 3;
+            btnAccept.Text = "&Accept";
+            btnAccept.UseVisualStyleBackColor = true;
+            btnAccept.Click += btnAccept_Click;
             // 
             // lblChooseClass
             // 
@@ -81,7 +101,7 @@
             // btn_Back
             // 
             btn_Back.Anchor = AnchorStyles.Left;
-            btn_Back.Location = new Point(33, 250);
+            btn_Back.Location = new Point(12, 260);
             btn_Back.Name = "btn_Back";
             btn_Back.Size = new Size(75, 23);
             btn_Back.TabIndex = 1;
@@ -91,33 +111,13 @@
             // 
             // btn_Next
             // 
-            btn_Next.Location = new Point(877, 260);
+            btn_Next.Location = new Point(860, 260);
             btn_Next.Name = "btn_Next";
             btn_Next.Size = new Size(75, 23);
             btn_Next.TabIndex = 2;
             btn_Next.Text = "button2";
             btn_Next.UseVisualStyleBackColor = true;
             btn_Next.Click += btn_Next_Click;
-            // 
-            // btnAccept
-            // 
-            btnAccept.Location = new Point(154, 461);
-            btnAccept.Name = "btnAccept";
-            btnAccept.Size = new Size(75, 23);
-            btnAccept.TabIndex = 3;
-            btnAccept.Text = "&Accept";
-            btnAccept.UseVisualStyleBackColor = true;
-            btnAccept.Click += btnAccept_Click;
-            // 
-            // btnCancel
-            // 
-            btnCancel.Location = new Point(362, 458);
-            btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(75, 23);
-            btnCancel.TabIndex = 4;
-            btnCancel.Text = "&Cancel";
-            btnCancel.UseVisualStyleBackColor = true;
-            btnCancel.Click += btnCancel_Click;
             // 
             // FormDndCharacterCreation
             // 
@@ -131,6 +131,7 @@
             Name = "FormDndCharacterCreation";
             Text = "Character Creation";
             FormClosed += ShowStartForm;
+            Load += FormDndCharacterCreation_Load;
             pnlClassSelection.ResumeLayout(false);
             pnlClassSelection.PerformLayout();
             ResumeLayout(false);

@@ -1,3 +1,4 @@
+using ChimerasCauldron.Core.DND;
 using Microsoft.Data.Sqlite;
 using System.ComponentModel;
 
@@ -5,6 +6,10 @@ namespace ChimerasCauldron
 {
     public partial class FormDndCharacterCreation : Form
     {
+
+        /*--CLASS LEVEL VARIABLES-----------------------------------------------------------------------------------------------------------------VARIABLES--*/
+        DndCharacter newCharacter;
+
         public FormDndCharacterCreation()
         {
             InitializeComponent();
@@ -14,6 +19,15 @@ namespace ChimerasCauldron
             ConfigureCharacterPanelWithMargin();
             ConfigureButtons();
             LoadComponents();
+
+            /*--CREATE A NEW PLAYER CHARACTER--------------------------------------------------------------------------------------------------------PLAYER--*/
+            newCharacter = new DndCharacter();
+        }
+
+        /*--LOAD DATA AFTER THE FORM CONSTRUCTOR--------------------------------------------------------------------------------------------------FORM LOAD--*/
+        private void FormDndCharacterCreation_Load(object sender, EventArgs e)
+        {
+
         }
 
         /*--HELPER FUNCTIONS-------------------------------------------------------------------------------------------------------------------------HELPER FUNCTIONS--*/
@@ -130,5 +144,6 @@ namespace ChimerasCauldron
             DialogResult = DialogResult.Cancel;
             this.Close();
         }
+        
     }
 }
