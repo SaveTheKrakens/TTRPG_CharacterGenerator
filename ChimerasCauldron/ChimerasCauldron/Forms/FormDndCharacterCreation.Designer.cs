@@ -40,18 +40,12 @@
             // 
             pnlClassSelection.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pnlClassSelection.BackColor = SystemColors.ActiveCaption;
-            pnlClassSelection.Controls.Add(lblCharacterName);
-            pnlClassSelection.Controls.Add(txtCharacterName);
-            pnlClassSelection.Controls.Add(label1);
-            pnlClassSelection.Controls.Add(cboxBackgroundSelection);
-            pnlClassSelection.Controls.Add(cboxRaceSelection);
-            pnlClassSelection.Controls.Add(lblChooseRace);
             pnlClassSelection.Controls.Add(lblChooseClass);
             pnlClassSelection.Controls.Add(cboxClassSelection);
             pnlClassSelection.Controls.Add(pnl_CurrentCharacter);
             pnlClassSelection.Location = new Point(77, 12);
             pnlClassSelection.Name = "pnlClassSelection";
-            pnlClassSelection.Size = new Size(751, 547);
+            pnlClassSelection.Size = new Size(822, 547);
             pnlClassSelection.TabIndex = 0;
             // 
             // lblChooseClass
@@ -81,31 +75,11 @@
             // 
             // btn_Next
             // 
-            btn_Next.Location = new Point(792, 260);
-            btn_Next.Name = "btn_Next";
-            btn_Next.Size = new Size(75, 23);
-            btn_Next.TabIndex = 2;
-            btn_Next.Text = "&Next";
-            btn_Next.UseVisualStyleBackColor = true;
-            btn_Next.Click += btn_Next_Click;
-            // 
-            // btn_Back
-            // 
-            btn_Back.Anchor = AnchorStyles.Left;
-            btn_Back.Location = new Point(12, 260);
-            btn_Back.Name = "btn_Back";
-            btn_Back.Size = new Size(75, 23);
-            btn_Back.TabIndex = 1;
-            btn_Back.Text = "&Back";
-            btn_Back.UseVisualStyleBackColor = true;
-            // 
-            // txtCharacterName
-            // 
             btn_Next.Location = new Point(860, 260);
             btn_Next.Name = "btn_Next";
             btn_Next.Size = new Size(75, 23);
             btn_Next.TabIndex = 2;
-            btn_Next.Text = "button2";
+            btn_Next.Text = "N&ext";
             btn_Next.UseVisualStyleBackColor = true;
             btn_Next.Click += btn_Next_Click;
             // 
@@ -114,9 +88,8 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Window;
-            ClientSize = new Size(909, 571);
+            ClientSize = new Size(980, 571);
             Controls.Add(btn_Next);
-            Controls.Add(btn_Back);
             Controls.Add(pnlClassSelection);
             Name = "FormDndCharacterCreation";
             Text = "Character Creation";
