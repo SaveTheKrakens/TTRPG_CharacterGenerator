@@ -16,5 +16,10 @@ namespace ChimerasCauldron
         {
             InitializeComponent();
         }
+
+        private void FormRandomGenerator_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

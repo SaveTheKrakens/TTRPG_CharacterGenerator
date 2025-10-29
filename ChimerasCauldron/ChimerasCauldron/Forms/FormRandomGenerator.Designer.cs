@@ -50,6 +50,7 @@
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
+            label10 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -130,7 +131,7 @@
             label5.Font = new Font("Segoe UI", 12F);
             label5.Location = new Point(48, 140);
             label5.Name = "label5";
-            label5.Size = new Size(121, 28);
+            label5.Size = new Size(0, 28);
             label5.TabIndex = 8;
             // 
             // textBox4
@@ -254,11 +255,22 @@
             button4.Text = "Again";
             button4.UseVisualStyleBackColor = true;
             // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 12F);
+            label10.Location = new Point(48, 144);
+            label10.Name = "label10";
+            label10.Size = new Size(121, 28);
+            label10.TabIndex = 22;
+            label10.Text = "Background:";
+            // 
             // FormRandomGenerator
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label10);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
@@ -283,6 +295,7 @@
             Controls.Add(label1);
             Name = "FormRandomGenerator";
             Text = "Random Generator";
+            Load += FormRandomGenerator_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -311,5 +324,6 @@
         private Button button2;
         private Button button3;
         private Button button4;
+        private Label label10;
     }
 }
