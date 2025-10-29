@@ -85,6 +85,7 @@
             btn_Next.Size = new Size(75, 23);
             btn_Next.TabIndex = 2;
             btn_Next.Text = "N&ext";
+            btn_Next.Text = "button2";
             btn_Next.UseVisualStyleBackColor = true;
             btn_Next.Click += btn_Next_Click;
             // 
@@ -112,6 +113,11 @@
             btn_Back.Size = new Size(75, 23);
             btn_Back.TabIndex = 3;
             btn_Back.Text = "&Back";
+            btn_Back.Location = new Point(-34, 260);
+            btn_Back.Name = "btn_Back";
+            btn_Back.Size = new Size(75, 23);
+            btn_Back.TabIndex = 3;
+            btn_Back.Text = "button2";
             btn_Back.UseVisualStyleBackColor = true;
             // 
             // FormDndCharacterCreation
@@ -120,6 +126,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Window;
             ClientSize = new Size(980, 571);
+            ClientSize = new Size(909, 571);
             Controls.Add(btn_Back);
             Controls.Add(btn_Next);
             Controls.Add(pnlClassSelection);
@@ -147,6 +154,9 @@
         private TextBox txtCharacterName;
         private Label label2;
         private ComboBox comboBox1;
+        
+        private Label lblCharacterName;
+        private TextBox txtCharacterName;
         private Button btn_Back;
     }
 }
