@@ -155,8 +155,6 @@
         private Label label2;
         private ComboBox comboBox1;
         
-        private Label lblCharacterName;
-        private TextBox txtCharacterName;
         private Button btn_Back;
     }
 }
