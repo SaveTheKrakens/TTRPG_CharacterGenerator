@@ -33,6 +33,7 @@
             cboxClassSelection = new ComboBox();
             pnl_CurrentCharacter = new Panel();
             btn_Next = new Button();
+            btn_Back = new Button();
             pnlClassSelection.SuspendLayout();
             SuspendLayout();
             // 
@@ -83,12 +84,22 @@
             btn_Next.UseVisualStyleBackColor = true;
             btn_Next.Click += btn_Next_Click;
             // 
+            // btn_Back
+            // 
+            btn_Back.Location = new Point(-4, 260);
+            btn_Back.Name = "btn_Back";
+            btn_Back.Size = new Size(75, 23);
+            btn_Back.TabIndex = 3;
+            btn_Back.Text = "&Back";
+            btn_Back.UseVisualStyleBackColor = true;
+            // 
             // FormDndCharacterCreation
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Window;
             ClientSize = new Size(980, 571);
+            Controls.Add(btn_Back);
             Controls.Add(btn_Next);
             Controls.Add(pnlClassSelection);
             Name = "FormDndCharacterCreation";
@@ -111,8 +122,8 @@
         private ComboBox cboxBackgroundSelection;
         private Label label1;
         private Button btn_Next;
-        private Button btn_Back;
         private Label lblCharacterName;
         private TextBox txtCharacterName;
+        private Button btn_Back;
     }
 }
