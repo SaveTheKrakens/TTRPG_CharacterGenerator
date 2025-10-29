@@ -37,8 +37,10 @@
             cboClassPro3 = new ComboBox();
             lblClasspro3 = new Label();
             lblRacepro1 = new Label();
-            comboBox3 = new ComboBox();
-            comboBox4 = new ComboBox();
+            cboBkgrndPro1 = new ComboBox();
+            cboBkgrndPro2 = new ComboBox();
+            lblRacePro2 = new Label();
+            lblBackgroundPro1 = new Label();
             label1 = new Label();
             SuspendLayout();
             // 
@@ -123,30 +125,50 @@
             lblRacepro1.TabIndex = 8;
             lblRacepro1.Text = "1st Race Proficiency";
             // 
-            // comboBox3
+            // cboBkgrndPro1
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(12, 209);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(142, 23);
-            comboBox3.TabIndex = 9;
+            cboBkgrndPro1.FormattingEnabled = true;
+            cboBkgrndPro1.Location = new Point(12, 209);
+            cboBkgrndPro1.Name = "cboBkgrndPro1";
+            cboBkgrndPro1.Size = new Size(142, 23);
+            cboBkgrndPro1.TabIndex = 9;
+            cboBkgrndPro1.Text = "Choose a proficiency";
             // 
-            // comboBox4
+            // cboBkgrndPro2
             // 
-            comboBox4.FormattingEnabled = true;
-            comboBox4.Location = new Point(160, 209);
-            comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(137, 23);
-            comboBox4.TabIndex = 10;
+            cboBkgrndPro2.FormattingEnabled = true;
+            cboBkgrndPro2.Location = new Point(169, 209);
+            cboBkgrndPro2.Name = "cboBkgrndPro2";
+            cboBkgrndPro2.Size = new Size(139, 23);
+            cboBkgrndPro2.TabIndex = 10;
+            cboBkgrndPro2.Text = "Choose a proficiency";
+            // 
+            // lblRacePro2
+            // 
+            lblRacePro2.AutoSize = true;
+            lblRacePro2.Location = new Point(160, 98);
+            lblRacePro2.Name = "lblRacePro2";
+            lblRacePro2.Size = new Size(117, 15);
+            lblRacePro2.TabIndex = 11;
+            lblRacePro2.Text = "2nd Race Proficiency";
+            // 
+            // lblBackgroundPro1
+            // 
+            lblBackgroundPro1.AutoSize = true;
+            lblBackgroundPro1.Location = new Point(12, 191);
+            lblBackgroundPro1.Name = "lblBackgroundPro1";
+            lblBackgroundPro1.Size = new Size(151, 15);
+            lblBackgroundPro1.TabIndex = 12;
+            lblBackgroundPro1.Text = "1st Background Proficiency";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(160, 98);
+            label1.Location = new Point(169, 191);
             label1.Name = "label1";
-            label1.Size = new Size(117, 15);
-            label1.TabIndex = 11;
-            label1.Text = "2nd Race Proficiency";
+            label1.Size = new Size(156, 15);
+            label1.TabIndex = 13;
+            label1.Text = "2nd Background Proficiency";
             // 
             // ProficiencyChoices
             // 
@@ -154,8 +176,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(530, 476);
             Controls.Add(label1);
-            Controls.Add(comboBox4);
-            Controls.Add(comboBox3);
+            Controls.Add(lblBackgroundPro1);
+            Controls.Add(lblRacePro2);
+            Controls.Add(cboBkgrndPro2);
+            Controls.Add(cboBkgrndPro1);
             Controls.Add(lblRacepro1);
             Controls.Add(lblClasspro3);
             Controls.Add(cboClassPro3);
@@ -182,8 +206,10 @@
         private ComboBox cboClassPro3;
         private Label lblClasspro3;
         private Label lblRacepro1;
-        private ComboBox comboBox3;
-        private ComboBox comboBox4;
+        private ComboBox cboBkgrndPro1;
+        private ComboBox cboBkgrndPro2;
+        private Label lblRacePro2;
+        private Label lblBackgroundPro1;
         private Label label1;
     }
 }

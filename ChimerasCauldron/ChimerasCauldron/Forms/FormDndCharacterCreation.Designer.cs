@@ -33,6 +33,8 @@
             cboxClassSelection = new ComboBox();
             pnl_CurrentCharacter = new Panel();
             btn_Next = new Button();
+            comboBox1 = new ComboBox();
+            label2 = new Label();
             pnlClassSelection.SuspendLayout();
             SuspendLayout();
             // 
@@ -40,6 +42,8 @@
             // 
             pnlClassSelection.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pnlClassSelection.BackColor = SystemColors.ActiveCaption;
+            pnlClassSelection.Controls.Add(label2);
+            pnlClassSelection.Controls.Add(comboBox1);
             pnlClassSelection.Controls.Add(lblChooseClass);
             pnlClassSelection.Controls.Add(cboxClassSelection);
             pnlClassSelection.Controls.Add(pnl_CurrentCharacter);
@@ -83,6 +87,23 @@
             btn_Next.UseVisualStyleBackColor = true;
             btn_Next.Click += btn_Next_Click;
             // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(130, 35);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(124, 23);
+            comboBox1.TabIndex = 3;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(130, 17);
+            label2.Name = "label2";
+            label2.Size = new Size(75, 15);
+            label2.TabIndex = 4;
+            label2.Text = "Choose Race";
+            // 
             // FormDndCharacterCreation
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -114,5 +135,7 @@
         private Button btn_Back;
         private Label lblCharacterName;
         private TextBox txtCharacterName;
+        private Label label2;
+        private ComboBox comboBox1;
     }
 }
