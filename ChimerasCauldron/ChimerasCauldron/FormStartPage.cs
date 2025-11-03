@@ -31,11 +31,11 @@ namespace ChimerasCauldron
 
         private void btnNewCharacter_Click(object sender, EventArgs e)
         {
-            if(cBoxModules.SelectedIndex == 0)
+            if (cBoxModules.SelectedIndex == 0)
             {
                 Form formCharacterCreation = new FormDndCharacterCreation();
                 formCharacterCreation.ShowDialog();
-                
+
             }
         }
 
@@ -47,6 +47,21 @@ namespace ChimerasCauldron
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

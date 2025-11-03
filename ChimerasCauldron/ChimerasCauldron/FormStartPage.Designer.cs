@@ -31,24 +31,36 @@
             btnNewCharacter = new Button();
             btnLoadCharacter = new Button();
             btnExit = new Button();
+            btnRandomGenerator = new Button();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            pictureBox1 = new PictureBox();
             cBoxModules = new ComboBox();
+            label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            label8 = new Label();
+            label9 = new Label();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // btnNewCharacter
             // 
-            btnNewCharacter.Location = new Point(167, 206);
+            btnNewCharacter.Location = new Point(187, 114);
             btnNewCharacter.Name = "btnNewCharacter";
-            btnNewCharacter.Size = new Size(120, 23);
+            btnNewCharacter.Size = new Size(120, 30);
             btnNewCharacter.TabIndex = 0;
-            btnNewCharacter.Text = "NewCharacter";
+            btnNewCharacter.Text = "New Character";
             btnNewCharacter.UseVisualStyleBackColor = true;
             btnNewCharacter.Click += btnNewCharacter_Click;
             // 
             // btnLoadCharacter
             // 
-            btnLoadCharacter.Location = new Point(103, 235);
+            btnLoadCharacter.Location = new Point(187, 150);
             btnLoadCharacter.Name = "btnLoadCharacter";
-            btnLoadCharacter.Size = new Size(120, 23);
+            btnLoadCharacter.Size = new Size(120, 30);
             btnLoadCharacter.TabIndex = 1;
             btnLoadCharacter.Text = "Load Character";
             btnLoadCharacter.UseVisualStyleBackColor = true;
@@ -56,34 +68,162 @@
             // 
             // btnExit
             // 
-            btnExit.Location = new Point(103, 264);
+            btnExit.Location = new Point(187, 220);
             btnExit.Name = "btnExit";
-            btnExit.Size = new Size(120, 23);
+            btnExit.Size = new Size(120, 30);
             btnExit.TabIndex = 2;
             btnExit.Text = "Exit";
             btnExit.UseVisualStyleBackColor = true;
             btnExit.Click += btnExit_Click;
             // 
+            // btnRandomGenerator
+            // 
+            btnRandomGenerator.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnRandomGenerator.Location = new Point(187, 185);
+            btnRandomGenerator.Margin = new Padding(3, 2, 3, 2);
+            btnRandomGenerator.Name = "btnRandomGenerator";
+            btnRandomGenerator.Size = new Size(120, 30);
+            btnRandomGenerator.TabIndex = 6;
+            btnRandomGenerator.Text = "Random Generator";
+            btnRandomGenerator.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Showcard Gothic", 20.25F, FontStyle.Italic);
+            label1.ForeColor = Color.Crimson;
+            label1.Location = new Point(13, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(73, 33);
+            label1.TabIndex = 8;
+            label1.Text = "DND";
+            label1.Click += label1_Click_1;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Showcard Gothic", 20.25F, FontStyle.Italic);
+            label2.ForeColor = Color.Crimson;
+            label2.Location = new Point(31, 42);
+            label2.Name = "label2";
+            label2.Size = new Size(169, 33);
+            label2.TabIndex = 9;
+            label2.Text = "Character";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Showcard Gothic", 20.25F, FontStyle.Italic);
+            label3.ForeColor = Color.Crimson;
+            label3.Location = new Point(84, 75);
+            label3.Name = "label3";
+            label3.Size = new Size(134, 33);
+            label3.TabIndex = 10;
+            label3.Text = "Creator";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.kitsune_bit_art_shaded1;
+            pictureBox1.Location = new Point(224, 15);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(83, 93);
+            pictureBox1.TabIndex = 11;
+            pictureBox1.TabStop = false;
+            // 
             // cBoxModules
             // 
             cBoxModules.FormattingEnabled = true;
-            cBoxModules.Location = new Point(40, 206);
+            cBoxModules.Location = new Point(12, 114);
             cBoxModules.Name = "cBoxModules";
-            cBoxModules.Size = new Size(121, 23);
-            cBoxModules.TabIndex = 3;
+            cBoxModules.Size = new Size(169, 23);
+            cBoxModules.TabIndex = 12;
             // 
-            // frmStartPage
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Showcard Gothic", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.Crimson;
+            label4.Location = new Point(12, 147);
+            label4.Name = "label4";
+            label4.Size = new Size(163, 30);
+            label4.TabIndex = 13;
+            label4.Text = "Created by:";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("MV Boli", 11.25F);
+            label5.Location = new Point(13, 185);
+            label5.Name = "label5";
+            label5.Size = new Size(60, 20);
+            label5.TabIndex = 14;
+            label5.Text = "Spencer";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("MV Boli", 11.25F);
+            label6.Location = new Point(100, 218);
+            label6.Name = "label6";
+            label6.Size = new Size(41, 20);
+            label6.TabIndex = 15;
+            label6.Text = "Gabe";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("MV Boli", 11.25F);
+            label7.Location = new Point(16, 219);
+            label7.Name = "label7";
+            label7.Size = new Size(47, 20);
+            label7.TabIndex = 16;
+            label7.Text = "Jared";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("MV Boli", 11.25F);
+            label8.Location = new Point(58, 202);
+            label8.Name = "label8";
+            label8.Size = new Size(52, 20);
+            label8.TabIndex = 17;
+            label8.Text = "Ember";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("MV Boli", 11.25F);
+            label9.Location = new Point(104, 185);
+            label9.Name = "label9";
+            label9.Size = new Size(37, 20);
+            label9.TabIndex = 18;
+            label9.Text = "Alex";
+            // 
+            // FrmStartPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(334, 402);
+            ClientSize = new Size(326, 275);
+            Controls.Add(label9);
+            Controls.Add(label8);
+            Controls.Add(label7);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(label4);
             Controls.Add(cBoxModules);
+            Controls.Add(pictureBox1);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(btnRandomGenerator);
             Controls.Add(btnExit);
             Controls.Add(btnLoadCharacter);
             Controls.Add(btnNewCharacter);
-            Name = "frmStartPage";
+            Name = "FrmStartPage";
             Text = "Chimeras Cauldron";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -91,6 +231,17 @@
         private Button btnNewCharacter;
         private Button btnLoadCharacter;
         private Button btnExit;
+        private Button btnRandomGenerator;
+        private Label label1;
+        private Label label2;
+        private Label label3;
+        private PictureBox pictureBox1;
         private ComboBox cBoxModules;
+        private Label label4;
+        private Label label5;
+        private Label label6;
+        private Label label7;
+        private Label label8;
+        private Label label9;
     }
 }
