@@ -100,7 +100,7 @@ namespace ChimerasCauldron
             btn_Next.Text = ">>>";
         }
 
-        /*--SET UP COMPONENTS THAT USE SQLITE--------------------------------------------------------------------------------------------------------SQLITE--*/
+        /*--SET UP COMPONENTS THAT USE SQLITE--------------------------------------------------------------------------------------------------------SQLITE--
         private void LoadComponents()
         {
             cboxClassSelection.Text = "Choose Class";
@@ -116,7 +116,7 @@ namespace ChimerasCauldron
             {
                 cboxClassSelection.Items.Add(reader.GetString(0));
             }
-        }
+        }*/
 
         /*--BUTTON CLICKS---------------------------------------------------------------------------------------------------------------------BUTTON CLICKS--*/
         private void ShowStartForm(object sender, FormClosedEventArgs e)
@@ -126,9 +126,7 @@ namespace ChimerasCauldron
 
         private void btn_Next_Click(object sender, EventArgs e)
         {
-            Form proficiency = new ProficiencyChoices();
-            proficiency.ShowDialog();
+            
         }
-        
     }
 }

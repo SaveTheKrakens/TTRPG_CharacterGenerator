@@ -29,12 +29,9 @@
         private void InitializeComponent()
         {
             pnlClassSelection = new Panel();
-            lblChooseClass = new Label();
-            cboxClassSelection = new ComboBox();
+            lblChoice = new Label();
             pnl_CurrentCharacter = new Panel();
             btn_Next = new Button();
-            comboBox1 = new ComboBox();
-            label2 = new Label();
             btn_Back = new Button();
             pnlClassSelection.SuspendLayout();
             SuspendLayout();
@@ -43,93 +40,64 @@
             // 
             pnlClassSelection.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pnlClassSelection.BackColor = SystemColors.ActiveCaption;
-            pnlClassSelection.Controls.Add(label2);
-            pnlClassSelection.Controls.Add(comboBox1);
-            pnlClassSelection.Controls.Add(lblChooseClass);
-            pnlClassSelection.Controls.Add(cboxClassSelection);
+            pnlClassSelection.Controls.Add(lblChoice);
             pnlClassSelection.Controls.Add(pnl_CurrentCharacter);
-            pnlClassSelection.Location = new Point(77, 12);
+            pnlClassSelection.Location = new Point(88, 16);
+            pnlClassSelection.Margin = new Padding(3, 4, 3, 4);
             pnlClassSelection.Name = "pnlClassSelection";
-            pnlClassSelection.Size = new Size(822, 547);
+            pnlClassSelection.Size = new Size(939, 729);
             pnlClassSelection.TabIndex = 0;
             // 
-            // lblChooseClass
+            // lblChoice
             // 
-            lblChooseClass.AutoSize = true;
-            lblChooseClass.Location = new Point(3, 17);
-            lblChooseClass.Name = "lblChooseClass";
-            lblChooseClass.Size = new Size(77, 15);
-            lblChooseClass.TabIndex = 2;
-            lblChooseClass.Text = "Choose Class";
-            // 
-            // cboxClassSelection
-            // 
-            cboxClassSelection.FormattingEnabled = true;
-            cboxClassSelection.Location = new Point(3, 35);
-            cboxClassSelection.Name = "cboxClassSelection";
-            cboxClassSelection.Size = new Size(121, 23);
-            cboxClassSelection.TabIndex = 1;
+            lblChoice.AutoSize = true;
+            lblChoice.Font = new Font("Lucida Calligraphy", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblChoice.Location = new Point(316, 0);
+            lblChoice.Name = "lblChoice";
+            lblChoice.Size = new Size(271, 39);
+            lblChoice.TabIndex = 2;
+            lblChoice.Text = "Character Sheet";
             // 
             // pnl_CurrentCharacter
             // 
             pnl_CurrentCharacter.BackColor = SystemColors.Window;
-            pnl_CurrentCharacter.Location = new Point(575, 17);
+            pnl_CurrentCharacter.Location = new Point(89, 91);
+            pnl_CurrentCharacter.Margin = new Padding(3, 4, 3, 4);
             pnl_CurrentCharacter.Name = "pnl_CurrentCharacter";
-            pnl_CurrentCharacter.Size = new Size(170, 509);
+            pnl_CurrentCharacter.Size = new Size(762, 611);
             pnl_CurrentCharacter.TabIndex = 0;
             // 
             // btn_Next
             // 
-            btn_Next.Location = new Point(860, 260);
+            btn_Next.Location = new Point(983, 347);
+            btn_Next.Margin = new Padding(3, 4, 3, 4);
             btn_Next.Name = "btn_Next";
-            btn_Next.Size = new Size(75, 23);
+            btn_Next.Size = new Size(86, 31);
             btn_Next.TabIndex = 2;
-            btn_Next.Text = "N&ext";
             btn_Next.Text = "button2";
             btn_Next.UseVisualStyleBackColor = true;
             btn_Next.Click += btn_Next_Click;
             // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(130, 35);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(124, 23);
-            comboBox1.TabIndex = 3;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(130, 17);
-            label2.Name = "label2";
-            label2.Size = new Size(75, 15);
-            label2.TabIndex = 4;
-            label2.Text = "Choose Race";
-            // 
             // btn_Back
             // 
-            btn_Back.Location = new Point(-4, 260);
+            btn_Back.Location = new Point(-39, 347);
+            btn_Back.Margin = new Padding(3, 4, 3, 4);
             btn_Back.Name = "btn_Back";
-            btn_Back.Size = new Size(75, 23);
-            btn_Back.TabIndex = 3;
-            btn_Back.Text = "&Back";
-            btn_Back.Location = new Point(-34, 260);
-            btn_Back.Name = "btn_Back";
-            btn_Back.Size = new Size(75, 23);
+            btn_Back.Size = new Size(86, 31);
             btn_Back.TabIndex = 3;
             btn_Back.Text = "button2";
             btn_Back.UseVisualStyleBackColor = true;
             // 
             // FormDndCharacterCreation
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Window;
-            ClientSize = new Size(980, 571);
-            ClientSize = new Size(909, 571);
+            ClientSize = new Size(1039, 761);
             Controls.Add(btn_Back);
             Controls.Add(btn_Next);
             Controls.Add(pnlClassSelection);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "FormDndCharacterCreation";
             Text = "Character Creation";
             FormClosed += ShowStartForm;
@@ -143,8 +111,7 @@
 
         private Panel pnlClassSelection;
         private Panel pnl_CurrentCharacter;
-        private Label lblChooseClass;
-        private ComboBox cboxClassSelection;
+        private Label lblChoice;
         private ComboBox cboxRaceSelection;
         private Label lblChooseRace;
         private ComboBox cboxBackgroundSelection;
@@ -152,8 +119,6 @@
         private Button btn_Next;
         private Label lblCharacterName;
         private TextBox txtCharacterName;
-        private Label label2;
-        private ComboBox comboBox1;
         
         private Button btn_Back;
     }

@@ -82,9 +82,9 @@
             label3.Font = new Font("Segoe UI", 12F);
             label3.Location = new Point(112, 226);
             label3.Name = "label3";
-            label3.Size = new Size(132, 28);
+            label3.Size = new Size(157, 28);
             label3.TabIndex = 4;
-            label3.Text = " Skill Abilities:";
+            label3.Text = " Skill Proficiency:";
             // 
             // checkedListBox3
             // 
