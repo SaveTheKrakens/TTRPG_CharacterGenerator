@@ -93,6 +93,7 @@
             btn_Back.TabIndex = 3;
             btn_Back.Text = "button2";
             btn_Back.UseVisualStyleBackColor = true;
+            btn_Back.Click += btn_Back_Click;
             // 
             // FormDndCharacterCreation
             // 

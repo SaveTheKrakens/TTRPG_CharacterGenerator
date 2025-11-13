@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ChimerasCauldron
+namespace ChimerasCauldron.Forms
 {
-    public partial class FormBackground : Form
+    public partial class UCRaceSpecies : UserControl
     {
-        public FormBackground()
+        public UCRaceSpecies()
         {
             InitializeComponent();
         }

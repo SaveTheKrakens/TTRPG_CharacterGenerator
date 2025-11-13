@@ -1,6 +1,6 @@
 ﻿namespace ChimerasCauldron.Forms
 {
-    partial class UCBackground
+    partial class UCRaceSpecies
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,108 +30,85 @@
         {
             button2 = new Button();
             button1 = new Button();
-            richTextBox1 = new RichTextBox();
-            comboBox1 = new ComboBox();
-            textBox1 = new TextBox();
+            checkedListBox1 = new CheckedListBox();
+            listBox1 = new ListBox();
             label3 = new Label();
             label2 = new Label();
-            label1 = new Label();
             SuspendLayout();
             // 
             // button2
             // 
             button2.Font = new Font("Segoe UI", 10F);
-            button2.Location = new Point(387, 260);
+            button2.Location = new Point(357, 192);
             button2.Margin = new Padding(3, 2, 3, 2);
             button2.Name = "button2";
             button2.Size = new Size(82, 22);
-            button2.TabIndex = 15;
+            button2.TabIndex = 12;
             button2.Text = "Back";
             button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
             button1.Font = new Font("Segoe UI", 10F);
-            button1.Location = new Point(234, 260);
+            button1.Location = new Point(211, 192);
             button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
             button1.Size = new Size(82, 22);
-            button1.TabIndex = 14;
+            button1.TabIndex = 11;
             button1.Text = "Continue";
             button1.UseVisualStyleBackColor = true;
             // 
-            // richTextBox1
+            // checkedListBox1
             // 
-            richTextBox1.Location = new Point(494, 40);
-            richTextBox1.Margin = new Padding(3, 2, 3, 2);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(200, 92);
-            richTextBox1.TabIndex = 13;
-            richTextBox1.Text = "";
+            checkedListBox1.FormattingEnabled = true;
+            checkedListBox1.Location = new Point(487, 20);
+            checkedListBox1.Margin = new Padding(3, 2, 3, 2);
+            checkedListBox1.Name = "checkedListBox1";
+            checkedListBox1.Size = new Size(132, 76);
+            checkedListBox1.TabIndex = 10;
             // 
-            // comboBox1
+            // listBox1
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(199, 74);
-            comboBox1.Margin = new Padding(3, 2, 3, 2);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(144, 23);
-            comboBox1.TabIndex = 12;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(210, 40);
-            textBox1.Margin = new Padding(3, 2, 3, 2);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(133, 23);
-            textBox1.TabIndex = 11;
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 15;
+            listBox1.Location = new Point(163, 20);
+            listBox1.Margin = new Padding(3, 2, 3, 2);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(132, 79);
+            listBox1.TabIndex = 9;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F);
-            label3.Location = new Point(387, 38);
+            label3.Location = new Point(307, 20);
             label3.Name = "label3";
-            label3.Size = new Size(92, 21);
-            label3.TabIndex = 10;
-            label3.Text = "Description:";
+            label3.Size = new Size(161, 21);
+            label3.TabIndex = 8;
+            label3.Text = "Choose Your Subrace:";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F);
-            label2.Location = new Point(49, 70);
+            label2.Location = new Point(15, 20);
             label2.Name = "label2";
-            label2.Size = new Size(132, 21);
-            label2.TabIndex = 9;
-            label2.Text = "Background Base:";
+            label2.Size = new Size(138, 21);
+            label2.TabIndex = 7;
+            label2.Text = "Choose Your Race:";
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F);
-            label1.Location = new Point(49, 38);
-            label1.Name = "label1";
-            label1.Size = new Size(142, 21);
-            label1.TabIndex = 8;
-            label1.Text = "Background Name:";
-            // 
-            // UCBackground
+            // UCRaceSpecies
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.Control;
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(richTextBox1);
-            Controls.Add(comboBox1);
-            Controls.Add(textBox1);
+            Controls.Add(checkedListBox1);
+            Controls.Add(listBox1);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(label1);
-            Margin = new Padding(3, 2, 3, 2);
-            Name = "UCBackground";
-            Size = new Size(795, 383);
+            Name = "UCRaceSpecies";
+            Size = new Size(741, 468);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -140,11 +117,9 @@
 
         private Button button2;
         private Button button1;
-        private RichTextBox richTextBox1;
-        private ComboBox comboBox1;
-        private TextBox textBox1;
+        private CheckedListBox checkedListBox1;
+        private ListBox listBox1;
         private Label label3;
         private Label label2;
-        private Label label1;
     }
 }

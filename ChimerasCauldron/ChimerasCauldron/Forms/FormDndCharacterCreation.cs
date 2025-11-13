@@ -10,6 +10,8 @@ namespace ChimerasCauldron
 
         /*--CLASS LEVEL VARIABLES-----------------------------------------------------------------------------------------------------------------VARIABLES--*/
         DndCharacter newCharacter;
+        private int contentIndex = 0;
+        private SortedList<int, UserControl> contentControls;
 
         public FormDndCharacterCreation()
         {
@@ -20,8 +22,20 @@ namespace ChimerasCauldron
             ConfigureContentCharacterPanelWithMargin();
             ConfigureButtons();
             //LoadComponents();
-            UserControl ucBackground = new UCBackground();
-            pnlClassSelection.Controls.Add(ucBackground);
+
+            // Clear content children and set up the user control array
+            pnl_Content.Controls.Clear();
+            // Set up an array to move through the controls
+            contentControls = new();
+            // Create user control instances and add to list
+            UCClass ucClass = new UCClass();
+            UCRaceSpecies ucRace = new UCRaceSpecies();
+            UCBackground ucBackground = new UCBackground();
+            contentControls.Add(0, ucClass);
+            contentControls.Add(1, ucRace);
+            contentControls.Add(2, ucBackground);
+
+            pnl_Content.Controls.Add(contentControls[contentIndex]);
 
             /*--CREATE A NEW PLAYER CHARACTER--------------------------------------------------------------------------------------------------------PLAYER--*/
             newCharacter = new DndCharacter();
@@ -59,9 +73,9 @@ namespace ChimerasCauldron
         private void ConfigureContentCharacterPanelWithMargin()
         {
             //Make sure the panels have the correct parent
-            if(pnl_CurrentCharacter.Parent != pnlContentCreation)
+            if (pnl_CurrentCharacter.Parent != pnlContentCreation)
             {
-                if(pnl_CurrentCharacter.Parent == null)
+                if (pnl_CurrentCharacter.Parent == null)
                 {
                     pnlContentCreation.Controls.Add(pnl_CurrentCharacter);
                 }
@@ -103,7 +117,7 @@ namespace ChimerasCauldron
             pnl_CurrentCharacter.Size = new Size(minWidthCharacter, pnl_CurrentCharacter.Parent.Height - (3 * topBottomMargin));
 
             pnl_Content.Location = new Point(sideMargin, topBottomMargin * 2);
-            pnl_Content.Size = new Size(pnl_Content.Parent.Width - pnl_CurrentCharacter.Width - (sideMargin*3), pnl_Content.Parent.Height - (3 * topBottomMargin));
+            pnl_Content.Size = new Size(pnl_Content.Parent.Width - pnl_CurrentCharacter.Width - (sideMargin * 3), pnl_Content.Parent.Height - (3 * topBottomMargin));
 
             // Handle resizing to maintain margins
             this.Resize += (s, e) =>
@@ -113,7 +127,19 @@ namespace ChimerasCauldron
                 pnl_CurrentCharacter.Size = new Size(minWidthCharacter, pnl_CurrentCharacter.Parent.Height - (3 * topBottomMargin));
                 pnl_Content.Location = new Point(sideMargin, topBottomMargin * 2);
                 pnl_Content.Size = new Size(pnl_Content.Parent.Width - pnl_CurrentCharacter.Width - (sideMargin * 3), pnl_Content.Parent.Height - (3 * topBottomMargin));
+                ResizeContentChildren();
             };
+        }
+
+        private void ResizeContentChildren() 
+        {
+            foreach (Control ctrl in pnl_Content.Controls)
+            {
+                if (ctrl is UserControl)
+                {
+                    ctrl.Dock = DockStyle.Fill;
+                }
+            }
         }
 
         /*--SET UP THE BACK AND NEXT BUTTONS----------------------------------------------------------------------------------------------BACK NEXT BUTTONS--*/
@@ -165,7 +191,26 @@ namespace ChimerasCauldron
 
         private void btn_Next_Click(object sender, EventArgs e)
         {
-            
+            int nextIndex = contentIndex + 1;
+            if(nextIndex < contentControls.Count)
+            {
+                contentIndex++;
+                pnl_Content.Controls.Clear();
+                pnl_Content.Controls.Add(contentControls[contentIndex]);
+                ResizeContentChildren();
+            }
+        }
+
+        private void btn_Back_Click(object sender, EventArgs e)
+        {
+            int nextIndex = contentIndex - 1;
+            if(nextIndex >= 0)
+            {
+                contentIndex--;
+                pnl_Content.Controls.Clear();
+                pnl_Content.Controls.Add(contentControls[contentIndex]);
+                ResizeContentChildren();
+            }
         }
     }
 }
