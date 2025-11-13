@@ -19,7 +19,9 @@ namespace ChimerasCauldron
             ConfigurePanelWithMargin(pnlClassSelection, 80, 20);
             ConfigureCharacterPanelWithMargin();
             ConfigureButtons();
-            LoadComponents();
+            //LoadComponents();
+            UserControl ucBackground = new UCBackground();
+            pnlClassSelection.Controls.Add(ucBackground);
 
             /*--CREATE A NEW PLAYER CHARACTER--------------------------------------------------------------------------------------------------------PLAYER--*/
             newCharacter = new DndCharacter();
