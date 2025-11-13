@@ -28,51 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
-            pnlClassSelection = new Panel();
+            pnlContentCreation = new Panel();
+            pnl_Content = new Panel();
             lblChoice = new Label();
             pnl_CurrentCharacter = new Panel();
             btn_Next = new Button();
             btn_Back = new Button();
-            pnlClassSelection.SuspendLayout();
+            pnlContentCreation.SuspendLayout();
             SuspendLayout();
             // 
-            // pnlClassSelection
+            // pnlContentCreation
             // 
-            pnlClassSelection.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            pnlClassSelection.BackColor = SystemColors.ActiveCaption;
-            pnlClassSelection.Controls.Add(lblChoice);
-            pnlClassSelection.Controls.Add(pnl_CurrentCharacter);
-            pnlClassSelection.Location = new Point(88, 16);
-            pnlClassSelection.Margin = new Padding(3, 4, 3, 4);
-            pnlClassSelection.Name = "pnlClassSelection";
-            pnlClassSelection.Size = new Size(939, 729);
-            pnlClassSelection.TabIndex = 0;
+            pnlContentCreation.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            pnlContentCreation.BackColor = SystemColors.ActiveCaption;
+            pnlContentCreation.Controls.Add(pnl_Content);
+            pnlContentCreation.Controls.Add(lblChoice);
+            pnlContentCreation.Controls.Add(pnl_CurrentCharacter);
+            pnlContentCreation.Location = new Point(77, 12);
+            pnlContentCreation.Name = "pnlContentCreation";
+            pnlContentCreation.Size = new Size(822, 547);
+            pnlContentCreation.TabIndex = 0;
+            // 
+            // pnl_Content
+            // 
+            pnl_Content.BackColor = SystemColors.Control;
+            pnl_Content.Location = new Point(25, 68);
+            pnl_Content.Name = "pnl_Content";
+            pnl_Content.Size = new Size(533, 458);
+            pnl_Content.TabIndex = 3;
             // 
             // lblChoice
             // 
             lblChoice.AutoSize = true;
             lblChoice.Font = new Font("Lucida Calligraphy", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblChoice.Location = new Point(316, 0);
+            lblChoice.Location = new Point(276, 0);
             lblChoice.Name = "lblChoice";
-            lblChoice.Size = new Size(271, 39);
+            lblChoice.Size = new Size(218, 31);
             lblChoice.TabIndex = 2;
             lblChoice.Text = "Character Sheet";
             // 
             // pnl_CurrentCharacter
             // 
             pnl_CurrentCharacter.BackColor = SystemColors.Window;
-            pnl_CurrentCharacter.Location = new Point(89, 91);
-            pnl_CurrentCharacter.Margin = new Padding(3, 4, 3, 4);
+            pnl_CurrentCharacter.Location = new Point(579, 68);
             pnl_CurrentCharacter.Name = "pnl_CurrentCharacter";
-            pnl_CurrentCharacter.Size = new Size(762, 611);
+            pnl_CurrentCharacter.Size = new Size(166, 458);
             pnl_CurrentCharacter.TabIndex = 0;
             // 
             // btn_Next
             // 
-            btn_Next.Location = new Point(983, 347);
-            btn_Next.Margin = new Padding(3, 4, 3, 4);
+            btn_Next.Location = new Point(860, 260);
             btn_Next.Name = "btn_Next";
-            btn_Next.Size = new Size(86, 31);
+            btn_Next.Size = new Size(75, 23);
             btn_Next.TabIndex = 2;
             btn_Next.Text = "button2";
             btn_Next.UseVisualStyleBackColor = true;
@@ -80,36 +87,34 @@
             // 
             // btn_Back
             // 
-            btn_Back.Location = new Point(-39, 347);
-            btn_Back.Margin = new Padding(3, 4, 3, 4);
+            btn_Back.Location = new Point(-34, 260);
             btn_Back.Name = "btn_Back";
-            btn_Back.Size = new Size(86, 31);
+            btn_Back.Size = new Size(75, 23);
             btn_Back.TabIndex = 3;
             btn_Back.Text = "button2";
             btn_Back.UseVisualStyleBackColor = true;
             // 
             // FormDndCharacterCreation
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Window;
-            ClientSize = new Size(1039, 761);
+            ClientSize = new Size(909, 571);
             Controls.Add(btn_Back);
             Controls.Add(btn_Next);
-            Controls.Add(pnlClassSelection);
-            Margin = new Padding(3, 4, 3, 4);
+            Controls.Add(pnlContentCreation);
             Name = "FormDndCharacterCreation";
             Text = "Character Creation";
             FormClosed += ShowStartForm;
             Load += FormDndCharacterCreation_Load;
-            pnlClassSelection.ResumeLayout(false);
-            pnlClassSelection.PerformLayout();
+            pnlContentCreation.ResumeLayout(false);
+            pnlContentCreation.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel pnlClassSelection;
+        private Panel pnlContentCreation;
         private Panel pnl_CurrentCharacter;
         private Label lblChoice;
         private ComboBox cboxRaceSelection;
@@ -121,5 +126,6 @@
         private TextBox txtCharacterName;
         
         private Button btn_Back;
+        private Panel pnl_Content;
     }
 }

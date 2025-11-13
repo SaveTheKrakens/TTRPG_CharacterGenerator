@@ -16,10 +16,10 @@ namespace ChimerasCauldron
             InitializeComponent();
 
             /*--GET THE PANELS LAYOUT TO STAY IN THE CENTER------------------------------------------------------------------------------------------PANELS--*/
-            ConfigurePanelWithMargin(pnlClassSelection, 80, 20);
-            ConfigureCharacterPanelWithMargin();
+            ConfigurePanelWithMargin(pnlContentCreation, 80, 20);
+            ConfigureContentCharacterPanelWithMargin();
             ConfigureButtons();
-            LoadComponents();
+            //LoadComponents();
 
             /*--CREATE A NEW PLAYER CHARACTER--------------------------------------------------------------------------------------------------------PLAYER--*/
             newCharacter = new DndCharacter();
@@ -54,26 +54,63 @@ namespace ChimerasCauldron
         }
 
         /*--GET THE CHARACTER PANEL TO STAY TO THE RIGHT THROUGHOUT CREATION----------------------------------------------------------------CHARACTER PANEL--*/
-        private void ConfigureCharacterPanelWithMargin()
+        private void ConfigureContentCharacterPanelWithMargin()
         {
+            //Make sure the panels have the correct parent
+            if(pnl_CurrentCharacter.Parent != pnlContentCreation)
+            {
+                if(pnl_CurrentCharacter.Parent == null)
+                {
+                    pnlContentCreation.Controls.Add(pnl_CurrentCharacter);
+                }
+                else
+                {
+                    var parent = pnl_CurrentCharacter.Parent;
+                    parent.Controls.Remove(pnl_CurrentCharacter);
+                    pnlContentCreation.Controls.Add(pnl_CurrentCharacter);
+                }
+            }
+            //Make sure the panels have the correct parent
+            if (pnl_Content.Parent != pnlContentCreation)
+            {
+                if (pnl_Content.Parent == null)
+                {
+                    pnlContentCreation.Controls.Add(pnl_Content);
+                }
+                else
+                {
+                    var parent = pnl_Content.Parent;
+                    parent.Controls.Remove(pnl_Content);
+                    pnlContentCreation.Controls.Add(pnl_Content);
+                }
+            }
+
             // Set anchor on top right and bottom to stick it to the side of the panel
             pnl_CurrentCharacter.Anchor = AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Bottom;
+            pnl_Content.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Bottom | AnchorStyles.Right;
 
             // Set the initial location and margins
             int topBottomMargin = 20;
-            int sideMargin = 180;
-            int minWidth = 200;
-            int maxWidth = 500;
+            int sideMargin = 20;
 
-            pnl_CurrentCharacter.Location = new Point(this.ClientSize.Width - minWidth - sideMargin, topBottomMargin);
-            pnl_CurrentCharacter.Size = new Size(minWidth, this.ClientSize.Height - (4 * topBottomMargin));
+            // Size for the character panel, leftovers for content selection panel
+            int minWidthCharacter = 200;
+            int maxWidthCharacter = 500;
+
+            pnl_CurrentCharacter.Location = new Point(pnl_CurrentCharacter.Parent.Width - minWidthCharacter - sideMargin, topBottomMargin * 2);
+            pnl_CurrentCharacter.Size = new Size(minWidthCharacter, pnl_CurrentCharacter.Parent.Height - (3 * topBottomMargin));
+
+            pnl_Content.Location = new Point(sideMargin, topBottomMargin * 2);
+            pnl_Content.Size = new Size(pnl_Content.Parent.Width - pnl_CurrentCharacter.Width - (sideMargin*3), pnl_Content.Parent.Height - (3 * topBottomMargin));
 
             // Handle resizing to maintain margins
             this.Resize += (s, e) =>
             {
-                int currentWidth = Math.Clamp(pnlClassSelection.Width / 5, minWidth, maxWidth);
-                pnl_CurrentCharacter.Location = new Point(this.ClientSize.Width - currentWidth - sideMargin, topBottomMargin);
-                pnl_CurrentCharacter.Size = new Size(currentWidth, this.ClientSize.Height - 4 * topBottomMargin);
+                int currentWidth = Math.Clamp(pnlContentCreation.Width / 5, minWidthCharacter, maxWidthCharacter);
+                pnl_CurrentCharacter.Location = new Point(pnl_CurrentCharacter.Parent.Width - minWidthCharacter - sideMargin, topBottomMargin * 2);
+                pnl_CurrentCharacter.Size = new Size(minWidthCharacter, pnl_CurrentCharacter.Parent.Height - (3 * topBottomMargin));
+                pnl_Content.Location = new Point(sideMargin, topBottomMargin * 2);
+                pnl_Content.Size = new Size(pnl_Content.Parent.Width - pnl_CurrentCharacter.Width - (sideMargin * 3), pnl_Content.Parent.Height - (3 * topBottomMargin));
             };
         }
 
