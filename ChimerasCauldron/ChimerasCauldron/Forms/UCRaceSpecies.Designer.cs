@@ -28,98 +28,91 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button2 = new Button();
-            button1 = new Button();
             checkedListBox1 = new CheckedListBox();
-            listBox1 = new ListBox();
             label3 = new Label();
             label2 = new Label();
+            checkedListBox2 = new CheckedListBox();
+            label1 = new Label();
+            checkedListBox3 = new CheckedListBox();
             SuspendLayout();
-            // 
-            // button2
-            // 
-            button2.Font = new Font("Segoe UI", 10F);
-            button2.Location = new Point(357, 192);
-            button2.Margin = new Padding(3, 2, 3, 2);
-            button2.Name = "button2";
-            button2.Size = new Size(82, 22);
-            button2.TabIndex = 12;
-            button2.Text = "Back";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            button1.Font = new Font("Segoe UI", 10F);
-            button1.Location = new Point(211, 192);
-            button1.Margin = new Padding(3, 2, 3, 2);
-            button1.Name = "button1";
-            button1.Size = new Size(82, 22);
-            button1.TabIndex = 11;
-            button1.Text = "Continue";
-            button1.UseVisualStyleBackColor = true;
             // 
             // checkedListBox1
             // 
             checkedListBox1.FormattingEnabled = true;
-            checkedListBox1.Location = new Point(487, 20);
-            checkedListBox1.Margin = new Padding(3, 2, 3, 2);
+            checkedListBox1.Location = new Point(132, 25);
             checkedListBox1.Name = "checkedListBox1";
-            checkedListBox1.Size = new Size(132, 76);
+            checkedListBox1.Size = new Size(181, 114);
             checkedListBox1.TabIndex = 10;
-            // 
-            // listBox1
-            // 
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(163, 20);
-            listBox1.Margin = new Padding(3, 2, 3, 2);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(132, 79);
-            listBox1.TabIndex = 9;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F);
-            label3.Location = new Point(307, 20);
+            label3.Location = new Point(40, 156);
             label3.Name = "label3";
-            label3.Size = new Size(161, 21);
+            label3.Size = new Size(86, 28);
             label3.TabIndex = 8;
-            label3.Text = "Choose Your Subrace:";
+            label3.Text = "Subrace:";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F);
-            label2.Location = new Point(15, 20);
+            label2.Location = new Point(69, 25);
             label2.Name = "label2";
-            label2.Size = new Size(138, 21);
+            label2.Size = new Size(57, 28);
             label2.TabIndex = 7;
-            label2.Text = "Choose Your Race:";
+            label2.Text = "Race:";
+            // 
+            // checkedListBox2
+            // 
+            checkedListBox2.FormattingEnabled = true;
+            checkedListBox2.Location = new Point(132, 156);
+            checkedListBox2.Name = "checkedListBox2";
+            checkedListBox2.Size = new Size(181, 114);
+            checkedListBox2.TabIndex = 12;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F);
+            label1.Location = new Point(17, 289);
+            label1.Name = "label1";
+            label1.Size = new Size(109, 28);
+            label1.TabIndex = 11;
+            label1.Text = "Languages:";
+            // 
+            // checkedListBox3
+            // 
+            checkedListBox3.FormattingEnabled = true;
+            checkedListBox3.Location = new Point(132, 289);
+            checkedListBox3.Name = "checkedListBox3";
+            checkedListBox3.Size = new Size(181, 114);
+            checkedListBox3.TabIndex = 13;
             // 
             // UCRaceSpecies
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(checkedListBox3);
+            Controls.Add(checkedListBox2);
+            Controls.Add(label1);
             Controls.Add(checkedListBox1);
-            Controls.Add(listBox1);
             Controls.Add(label3);
             Controls.Add(label2);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "UCRaceSpecies";
-            Size = new Size(741, 468);
+            Size = new Size(383, 459);
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Button button2;
-        private Button button1;
         private CheckedListBox checkedListBox1;
-        private ListBox listBox1;
         private Label label3;
         private Label label2;
+        private CheckedListBox checkedListBox2;
+        private Label label1;
+        private CheckedListBox checkedListBox3;
     }
 }

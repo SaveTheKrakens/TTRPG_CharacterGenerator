@@ -35,27 +35,30 @@
             // pnlFlowLeft
             // 
             pnlFlowLeft.BackColor = SystemColors.AppWorkspace;
-            pnlFlowLeft.Location = new Point(3, 3);
+            pnlFlowLeft.Location = new Point(3, 4);
+            pnlFlowLeft.Margin = new Padding(3, 4, 3, 4);
             pnlFlowLeft.Name = "pnlFlowLeft";
-            pnlFlowLeft.Size = new Size(295, 399);
+            pnlFlowLeft.Size = new Size(220, 532);
             pnlFlowLeft.TabIndex = 0;
             // 
             // pnlFlowRight
             // 
             pnlFlowRight.BackColor = SystemColors.ControlDarkDark;
-            pnlFlowRight.Location = new Point(343, 3);
+            pnlFlowRight.Location = new Point(246, 4);
+            pnlFlowRight.Margin = new Padding(3, 4, 3, 4);
             pnlFlowRight.Name = "pnlFlowRight";
-            pnlFlowRight.Size = new Size(321, 399);
+            pnlFlowRight.Size = new Size(308, 532);
             pnlFlowRight.TabIndex = 1;
             // 
             // UCClass
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(pnlFlowRight);
             Controls.Add(pnlFlowLeft);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "UCClass";
-            Size = new Size(667, 405);
+            Size = new Size(593, 540);
             ResumeLayout(false);
         }
 
