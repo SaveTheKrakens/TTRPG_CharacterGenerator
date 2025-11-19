@@ -30,35 +30,60 @@
         {
             pnlFlowLeft = new FlowLayoutPanel();
             pnlFlowRight = new FlowLayoutPanel();
+            lblClassSelection = new Label();
+            lblClassDescription = new Label();
+            pnlFlowLeft.SuspendLayout();
+            pnlFlowRight.SuspendLayout();
             SuspendLayout();
             // 
             // pnlFlowLeft
             // 
             pnlFlowLeft.BackColor = SystemColors.AppWorkspace;
-            pnlFlowLeft.Location = new Point(3, 4);
-            pnlFlowLeft.Margin = new Padding(3, 4, 3, 4);
+            pnlFlowLeft.Controls.Add(lblClassSelection);
+            pnlFlowLeft.Location = new Point(3, 3);
             pnlFlowLeft.Name = "pnlFlowLeft";
-            pnlFlowLeft.Size = new Size(220, 532);
+            pnlFlowLeft.Size = new Size(192, 399);
             pnlFlowLeft.TabIndex = 0;
             // 
             // pnlFlowRight
             // 
             pnlFlowRight.BackColor = SystemColors.ControlDarkDark;
-            pnlFlowRight.Location = new Point(246, 4);
-            pnlFlowRight.Margin = new Padding(3, 4, 3, 4);
+            pnlFlowRight.Controls.Add(lblClassDescription);
+            pnlFlowRight.Location = new Point(215, 3);
             pnlFlowRight.Name = "pnlFlowRight";
-            pnlFlowRight.Size = new Size(308, 532);
+            pnlFlowRight.Size = new Size(270, 399);
             pnlFlowRight.TabIndex = 1;
+            // 
+            // lblClassSelection
+            // 
+            lblClassSelection.AutoSize = true;
+            lblClassSelection.Location = new Point(3, 0);
+            lblClassSelection.Name = "lblClassSelection";
+            lblClassSelection.Size = new Size(38, 15);
+            lblClassSelection.TabIndex = 0;
+            lblClassSelection.Text = "label1";
+            // 
+            // lblClassDescription
+            // 
+            lblClassDescription.AutoSize = true;
+            lblClassDescription.Location = new Point(3, 0);
+            lblClassDescription.Name = "lblClassDescription";
+            lblClassDescription.Size = new Size(38, 15);
+            lblClassDescription.TabIndex = 0;
+            lblClassDescription.Text = "label2";
             // 
             // UCClass
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(pnlFlowRight);
             Controls.Add(pnlFlowLeft);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "UCClass";
-            Size = new Size(593, 540);
+            Size = new Size(519, 405);
+            pnlFlowLeft.ResumeLayout(false);
+            pnlFlowLeft.PerformLayout();
+            pnlFlowRight.ResumeLayout(false);
+            pnlFlowRight.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -66,5 +91,7 @@
 
         private FlowLayoutPanel pnlFlowLeft;
         private FlowLayoutPanel pnlFlowRight;
+        private Label lblClassSelection;
+        private Label lblClassDescription;
     }
 }

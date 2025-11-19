@@ -29,9 +29,13 @@ namespace ChimerasCauldron
             contentControls = new();
             // Create user control instances and add to list
             UCClass ucClass = new UCClass();
+            ucClass.Dock = DockStyle.Fill;
             UCClassFeats ucClassFeats = new UCClassFeats();
+            ucClassFeats.Dock = DockStyle.Fill;
             UCRaceSpecies ucRace = new UCRaceSpecies();
+            ucRace.Dock = DockStyle.Fill;
             UCBackground ucBackground = new UCBackground();
+            ucBackground.Dock = DockStyle.Fill;
             contentControls.Add(0, ucClass);
             contentControls.Add(1, ucClassFeats);
             contentControls.Add(2, ucRace);

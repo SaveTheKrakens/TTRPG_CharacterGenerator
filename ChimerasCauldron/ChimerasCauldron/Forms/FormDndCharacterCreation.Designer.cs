@@ -104,6 +104,7 @@
             Controls.Add(btn_Back);
             Controls.Add(btn_Next);
             Controls.Add(pnlContentCreation);
+            MinimumSize = new Size(925, 600);
             Name = "FormDndCharacterCreation";
             Text = "Character Creation";
             FormClosed += ShowStartForm;

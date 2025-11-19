@@ -38,13 +38,24 @@ namespace ChimerasCauldron.Forms
             int margins = 10;
             Point startLoc = this.Location;
             pnlFlowLeft.Location = new Point(startLoc.X + margins, startLoc.Y + margins);
-            pnlFlowRight.Location = new Point(this.Width / 2, margins);
+            pnlFlowRight.Location = new Point(startLoc.X + pnlFlowLeft.Size.Width + margins*2, margins);
+
+            pnlFlowLeft.Size = new Size(Math.Clamp((this.Size.Width / 2) - (margins * 2), 100, 200), this.Size.Height - margins * 2);
+            pnlFlowRight.Size = new Size(this.Size.Width - pnlFlowLeft.Size.Width - (margins * 3), this.Size.Height - margins * 2);
+
+            lblClassSelection.Location = new Point(pnlFlowLeft.Location.X + margins, pnlFlowLeft.Location.Y + margins);
+            lblClassDescription.Location = new Point(pnlFlowRight.Location.X + margins, pnlFlowRight.Location.Y + margins);
         }
 
         private void SetResize(object sender, EventArgs e)
         {
-            int leftWidthMin = 100;
-            int leftWidthMax = 200;
+            int margins = 10;
+            Point startLoc = this.Location;
+            pnlFlowLeft.Location = new Point(startLoc.X + margins, startLoc.Y + margins);
+            pnlFlowRight.Location = new Point(startLoc.X + pnlFlowLeft.Size.Width + margins*2, margins);
+
+            pnlFlowLeft.Size = new Size(Math.Clamp((this.Size.Width / 2) - (margins * 2), 100, 200), this.Size.Height - margins * 2);
+            pnlFlowRight.Size = new Size(this.Size.Width - pnlFlowLeft.Size.Width - (margins * 3), this.Size.Height - margins * 2);
         }
     }
 }
