@@ -118,7 +118,7 @@ INSERT INTO Classes (
  NULL,
  NULL,
  NULL,
- 'Greataxe,4 Handaxes, Explorer''s Pack,15GP'
+ 'Greataxe,4 Handaxes, Explorer''s Pack, 15GP'
 );
 
 -- ADDING BARD
@@ -136,7 +136,7 @@ INSERT INTO Classes (
  '4,5,6,7,8,9,10,11,12,14,15,15,16,18,19,19,20,22,22,22',
  NULL,
  '2,2,2,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4,4',
- 'Leather Armor,2 Daggers, Musical Instrument, Entertainer''s Pack,19GP'
+ 'Leather Armor,2 Daggers, Musical Instrument, Entertainer''s Pack, 19GP'
 );
 
 -- ADDING CLERIC
@@ -154,7 +154,7 @@ INSERT INTO Classes (
  '<level>+<wisMod>',
  'restlong',
  '3,3,3,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,5,5',
- 'Chain Shirt, Shield, Mace, Holy Symbol, Priest''s Pack,7GP'
+ 'Chain Shirt, Shield, Mace, Holy Symbol, Priest''s Pack, 7GP'
 );
 
 -- ADDING DRUID
@@ -172,7 +172,7 @@ INSERT INTO Classes (
  '<level>+<wisMod>',
  'restlong',
  '2,2,2,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4,4',
- 'Leather Armor, Shield, Sickle, Druidic Focus/Quarter Staff, Explorer''s Pack, Herbalism Kit,9GP'
+ 'Leather Armor, Shield, Sickle, Druidic Focus/Quarter Staff, Explorer''s Pack, Herbalism Kit, 9GP'
 );
 
 -- ADDING FIGHTER
@@ -190,7 +190,7 @@ INSERT INTO Classes (
  NULL,
  NULL,
  NULL,
- 'Chain Mail, Greatsword, Flail,8 Javelins, Dungeoneer''s Pack,4GP or Studded Leather Armor, Scimitar, Shortsword, Longbow,20 Arrows, Quiver, Dungeoneer''s Pack,11GP'
+ 'Chain Mail, Greatsword, Flail,8 Javelins, Dungeoneer''s Pack, 4GP or Studded Leather Armor, Scimitar, Shortsword, Longbow,20 Arrows, Quiver, Dungeoneer''s Pack, 11GP'
 );
 
 -- ADDING MONK
@@ -208,7 +208,7 @@ INSERT INTO Classes (
  NULL,
  NULL,
  NULL,
- 'Spear,5 Daggers, Artisan''s Tools or Musical Instrument, Explorer''s Pack, and11 GP'
+ 'Spear,5 Daggers, Artisan''s Tools or Musical Instrument, Explorer''s Pack, 11GP'
 );
 
 -- ADDING PALADIN
@@ -226,7 +226,7 @@ INSERT INTO Classes (
  '<level> /2 + <cha_mod>',
  'restlong',
  NULL,
- 'Chain Mail, Shield, Longsword,6 Javelins, Holy Symbol, Priest''s Pack, and9 GP'
+ 'Chain Mail, Shield, Longsword,6 Javelins, Holy Symbol, Priest''s Pack, 9GP'
 );
 
 -- ADDING RANGER
@@ -244,7 +244,7 @@ INSERT INTO Classes (
  NULL,
  NULL,
  NULL,
- 'Studded Leather Armor, Scimitar, Shortsword, Longbow,20 Arrows, Quiver, Druidic Focus, Explorer''s Pack, and7 GP'
+ 'Studded Leather Armor, Scimitar, Shortsword, Longbow,20 Arrows, Quiver, Druidic Focus, Explorer''s Pack, 7GP'
 );
 
 -- ADDING ROGUE
@@ -262,7 +262,7 @@ INSERT INTO Classes (
  NULL,
  NULL,
  NULL,
- 'Leather Armor,2 Daggers, Shortsword, Shortbow,20 Arrows, Quiver, Thieves'' Tools, Burglar''s Pack, and8 GP'
+ 'Leather Armor,2 Daggers, Shortsword, Shortbow,20 Arrows, Quiver, Thieves'' Tools, Burglar''s Pack, 8GP'
 );
 
 -- ADDING SORCERER
@@ -280,7 +280,7 @@ INSERT INTO Classes (
  '<level> /2 + <cha_mod>',
  'restlong',
  '4,4,4,5,5,5,5,5,5,6,6,6,6,6,6,6,6,6,6,6',
- 'Spear,2 Daggers, Arcane Focus, Dungeoneer''s Pack, and28 GP'
+ 'Spear,2 Daggers, Arcane Focus, Dungeoneer''s Pack, 28GP'
 );
 
 -- ADDING WARLOCK
@@ -298,7 +298,7 @@ INSERT INTO Classes (
  NULL,
  'restlong',
  '2,2,2,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4',
- 'Leather Armor, Sickle,2 Daggers, Arcane Focus, Occult Object/Book, Scholar''s Pack, and15 GP'
+ 'Leather Armor, Sickle,2 Daggers, Arcane Focus, Occult Object/Book, Scholar''s Pack, 15GP'
 );
 
 -- ADDING WIZARD
@@ -316,7 +316,7 @@ INSERT INTO Classes (
  '<level> + <int_mod>',
  'restlong',
  '3,3,3,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,5,5',
- '2 Daggers, Arcane Focus, Robe, Spellbook, Scholar''s Pack, and5 GP'
+ '2 Daggers, Arcane Focus, Robe, Spellbook, Scholar''s Pack, 5GP'
 );
 
 
@@ -472,7 +472,7 @@ INSERT INTO Backgrounds (
  'You devoted yourself to service in a temple, either nestled in a town or secluded in a sacred grove. There you performed rites in honor of a god or pantheon. You served under a priest and studied religion. Thanks to your priest''s instruction and your own devotion, you also learned how to channel a modicum of divine power in service to your place of worship and the people who prayed there.',
  'Insight, Religion',
  'Calligrapher''s Supplies',
- 'Holy Symbol, Book (prayer), Calligrapher''s Supplies, Vestments, Common Clothes, 8 GP',
+ 'Holy Symbol, Book (prayer), Calligrapher''s Supplies, Vestments, Common Clothes, 8GP',
  'Magic Initiate (Cleric)'
 );
 
@@ -484,7 +484,7 @@ INSERT INTO Backgrounds (
  'You began mopping floors and scrubbing counters in an artisan''s workshop for a few coppers per day as soon as you were strong enough to carry a bucket. When you were old enough to apprentice, you learned to create basic crafts of your own, as well as how to sweet-talk the occasional demanding customer. Your trade has also given you a keen eye for detail.',
  'Investigation, Persuasion',
  'Artisan''s tools',
- 'Artisan''s Tools, 2 Pouches, Traveler''s Clothes, 32 GP',
+ 'Artisan''s Tools, 2 Pouches, Traveler''s Clothes, 32GP',
  'Crafter'
 );
 
@@ -496,7 +496,7 @@ INSERT INTO Backgrounds (
  'Once you were old enough to order an ale, you soon had a favorite stool in every tavern within ten miles of where you were born. As you traveled the circuit from public house to watering hole, you learned to prey on unfortunates who were in the market for a comforting lie or two—perhaps a sham potion or forged ancestry records.',
  'Deception, Sleight of Hand',
  'Forgery Kit',
- 'Fine Clothes, Costume, Forgery Kit, 15 GP',
+ 'Fine Clothes, Costume, Forgery Kit, 15GP',
  'Skilled'
 );
 
@@ -508,7 +508,7 @@ INSERT INTO Backgrounds (
  'You eked out a living in dark alleyways, cutting purses or burgling shops. Perhaps you were part of a small gang of like-minded wrongdoers who looked out for each other. Or maybe you were a lone wolf, fending for yourself against the local thieves'' guild and more fearsome lawbreakers.',
  'Deception, Stealth',
  'Thieves'' Tools',
- '2 Daggers, Crowbar, 2 Pouches, Traveler''s Clothes, Thieves'' Tools, 16 GP',
+ '2 Daggers, Crowbar, 2 Pouches, Traveler''s Clothes, Thieves'' Tools, 16GP',
  'Alert'
 );
 
@@ -520,7 +520,7 @@ INSERT INTO Backgrounds (
  'You spent much of your youth following roving fairs and carnivals, performing odd jobs for musicians and acrobats in exchange for lessons. You may have learned how to walk a tightrope, how to play a lute in a distinct style, or how to recite poetry with impeccable diction. To this day, you thrive on applause and long for the stage.',
  'Acrobatics, Performance',
  'Musical Instrument',
- 'Musical Instrument, 2 Costumes, Mirror, Perfume, Traveler''s Clothes, 11 GP',
+ 'Musical Instrument, 2 Costumes, Mirror, Perfume, Traveler''s Clothes, 11GP',
  'Musician'
 );
 
@@ -532,6 +532,6 @@ INSERT INTO Backgrounds (
  'You grew up close to the land. Years tending animals and cultivating the earth rewarded you with patience and good health. You have a keen appreciation for nature’s bounty alongside a healthy respect for nature''s wrath.',
  'Animal Handling, Nature',
  'Carpenter''s Tools',
- 'Sickle, Carpenter''s Tools, Healer''s Kit, Iron Pot, Shovel, Traveler''s Clothes, 30 GP',
+ 'Sickle, Carpenter''s Tools, Healer''s Kit, Iron Pot, Shovel, Traveler''s Clothes, 30GP',
  'Tough'
 );
