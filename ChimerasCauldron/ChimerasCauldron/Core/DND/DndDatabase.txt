@@ -35,17 +35,6 @@ CREATE TABLE IF NOT EXISTS PLAYER_CHARACTER (
  FOREIGN KEY (ITEMS_ID) REFERENCES ITEMS(Item_Id)
 );
 
--- Create Background TABLE
-CREATE TABLE IF NOT EXISTS Backgrounds (
- Name TEXT NOT NULL PRIMARY KEY,
- Description TEXT NOT NULL,
- Skill_Proficiencies TEXT NOT NULL,
- Tool_Proficiencies TEXT,
- Languages TEXT,
- Equipment TEXT NOT NULL,
- Feature TEXT NOT NULL
-);
-
 -- Create Ability_Scores TABLE
 CREATE TABLE IF NOT EXISTS Ability_Scores (
  Ability_Score_Id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -612,3 +601,285 @@ INSERT INTO RACES (
  TRUE,
  'Otherworldly Presence'
  );
+
+ -- Create Background TABLE
+CREATE TABLE IF NOT EXISTS Backgrounds (
+ Name TEXT NOT NULL PRIMARY KEY,
+ Description TEXT NOT NULL,
+ Skill_Proficiencies TEXT NOT NULL,
+ Tool_Proficiencies TEXT,
+ Equipment TEXT NOT NULL,
+ Feature TEXT NOT NULL
+);
+
+-- ADDING ACOLYTE --------------------------------------------------------------
+INSERT INTO Backgrounds (
+ Name,
+ Description,
+ Skill_Proficiencies,
+ Tool_Proficiencies,
+ Equipment,
+ Feature
+) VALUES (
+ 'Acolyte',
+ 'You devoted yourself to service in a temple, either nestled in a town or secluded in a sacred grove. There you performed rites in honor of a god or pantheon. You served under a priest and studied religion. Thanks to your priest's instruction and your own devotion, you also learned how to channel a modicum of divine power in service to your place of worship and the people who prayed there.',
+ 'Insight, Religion',
+ 'Calligrapher's Supplies',
+ 'Holy Symbol, Book (prayer), Calligrapher's Supplies, Vestments, Common Clothes, 8 GP',
+ 'Magic Initiate (Cleric)'
+);
+
+-- ADDING ARTISAN --------------------------------------------------------------
+INSERT INTO Backgrounds (
+ Name,
+ Description,
+ Skill_Proficiencies,
+ Tool_Proficiencies,
+ Equipment,
+ Feature
+) VALUES (
+ 'Artisan',
+ 'You began mopping floors and scrubbing counters in an artisan’s workshop for a few coppers per day as soon as you were strong enough to carry a bucket. When you were old enough to apprentice, you learned to create basic crafts of your own, as well as how to sweet-talk the occasional demanding customer. Your trade has also given you a keen eye for detail.',
+ 'Investigation, Persuasion',
+ 'One type of artisan's tools',
+ 'Artisan's Tools, 2 Pouches, Traveler's Clothes, 32 GP',
+ 'Crafter'
+);
+
+-- ADDING CHARLATAN ------------------------------------------------------------
+INSERT INTO Backgrounds (
+ Name,
+ Description,
+ Skill_Proficiencies,
+ Tool_Proficiencies,
+ Equipment,
+ Feature
+) VALUES (
+ 'Charlatan',
+ 'Once you were old enough to order an ale, you soon had a favorite stool in every tavern within ten miles of where you were born. As you traveled the circuit from public house to watering hole, you learned to prey on unfortunates who were in the market for a comforting lie or two—perhaps a sham potion or forged ancestry records.',
+ 'Deception, Sleight of Hand',
+ 'Forgery Kit',
+ 'Fine Clothes, Costume, Forgery Kit, 15 GP',
+ 'Skilled'
+);
+
+-- ADDING CRIMINAL -------------------------------------------------------------
+INSERT INTO Backgrounds (
+ Name,
+ Description,
+ Skill_Proficiencies,
+ Tool_Proficiencies,
+ Equipment,
+ Feature
+) VALUES (
+ 'Criminal',
+ 'You eked out a living in dark alleyways, cutting purses or burgling shops. Perhaps you were part of a small gang of like-minded wrongdoers who looked out for each other. Or maybe you were a lone wolf, fending for yourself against the local thieves' guild and more fearsome lawbreakers.',
+ 'Deception, Stealth',
+ 'Thieves' Tools',
+ '2 Daggers, Crowbar, 2 Pouches, Traveler's Clothes, Thieves' Tools, 16 GP',
+ 'Alert'
+);
+
+-- ADDING ENTERTAINER -----------------------------------------------------------
+INSERT INTO Backgrounds (
+ Name,
+ Description,
+ Skill_Proficiencies,
+ Tool_Proficiencies,
+ Equipment,
+ Feature
+) VALUES (
+ 'Entertainer',
+ 'You spent much of your youth following roving fairs and carnivals, performing odd jobs for musicians and acrobats in exchange for lessons. You may have learned how to walk a tightrope, how to play a lute in a distinct style, or how to recite poetry with impeccable diction. To this day, you thrive on applause and long for the stage.',
+ 'Acrobatics, Performance',
+ 'Musical Instrument',
+ 'Musical Instrument, 2 Costumes, Mirror, Perfume, Traveler’s Clothes, 11 GP',
+ 'Musician'
+);
+
+-- ADDING FARMER --------------------------------------------------------------
+INSERT INTO Backgrounds (
+ Name,
+ Description,
+ Skill_Proficiencies,
+ Tool_Proficiencies,
+ Equipment,
+ Feature
+) VALUES (
+ 'Farmer',
+ 'You grew up close to the land. Years tending animals and cultivating the earth rewarded you with patience and good health. You have a keen appreciation for nature’s bounty alongside a healthy respect for nature's wrath.',
+ 'Animal Handling, Nature',
+ 'Carpenter's Tools',
+ 'Sickle, Carpenter's Tools, Healer's Kit, Iron Pot, Shovel, Traveler's Clothes, 30 GP',
+ 'Tough'
+);
+
+-- ADDING GUARD ---------------------------------------------------------------
+INSERT INTO Backgrounds (
+ Name,
+ Description,
+ Skill_Proficiencies,
+ Tool_Proficiencies,
+ Equipment,
+ Feature
+) VALUES (
+ 'Guard',
+ 'Your feet ache when you remember the countless hours you spent at your post in the tower. You were trained to keep one eye looking outside the wall, watching for marauders sweeping from the nearby forest, and your other eye looking inside the wall, searching for cutpurses and troublemakers.',
+ 'Athletics, Perception',
+ 'Gaming Set',
+ 'Spear, Light Crossbow, 20 Bolts, Gaming Set, Hooded Lantern, Manacles, Quiver, Traveler’s Clothes, 12 GP',
+ 'Alert'
+);
+
+-- ADDING GUIDE ---------------------------------------------------------------
+INSERT INTO Backgrounds (
+ Name,
+ Description,
+ Skill_Proficiencies,
+ Tool_Proficiencies,
+ Equipment,
+ Feature
+) VALUES (
+ 'Guide',
+ 'You came of age outdoors, far from settled lands. Your home was anywhere you chose to spread your bedroll. There are wonders in the wilderness— strange monsters, pristine forests and streams, overgrown ruins of great halls once trod by giants— and you learned to fend for yourself as you explored them. From time to time, you guided friendly nature priests who instructed you in the fundamentals of channeling the magic of the wild.',
+ 'Survival, Stealth',
+ 'Cartographer's Tools',
+ 'Shortbow, 20 Arrows, Cartographer’s Tools, Bedroll, Quiver, Tent, Traveler's Clothes, 3 GP',
+ 'Magic Initiate (Druid)'
+);
+
+-- ADDING HERMIT --------------------------------------------------------------
+INSERT INTO Backgrounds (
+ Name,
+ Description,
+ Skill_Proficiencies,
+ Tool_Proficiencies,
+ Equipment,
+ Feature
+) VALUES (
+ 'Hermit',
+ 'You spent your early years secluded in a hut or monastery located well beyond the outskirts of the nearest settlement. In those days, your only companions were the creatures of the forest and those who would occasionally visit to bring news of the outside world and supplies. The solitude allowed you to spend many hours pondering the mysteries of creation.',
+ 'Medicine, Religion',
+ 'Herbalism Kit',
+ 'Quarterstaff, Herbalism Kit, Bedroll, Book (philosophy), Lamp, Oil (3 flasks), Traveler's Clothes, 16 GP',
+ 'Healer'
+);
+
+-- ADDING MERCHANT -------------------------------------------------------------
+INSERT INTO Backgrounds (
+ Name,
+ Description,
+ Skill_Proficiencies,
+ Tool_Proficiencies,
+ Equipment,
+ Feature
+) VALUES (
+ 'Merchant',
+ 'You were apprenticed to a trader, caravan master, or shopkeeper, learning the fundamentals of commerce. You traveled broadly, and you earned a living by buying and selling the raw materials artisans need to practice their craft or finished works from such crafters. You might have transported goods from one place to another (by ship, wagon, or caravan) or bought them from traveling traders and sold them in your own shop.',
+ 'Animal Handling, Persuation',
+ 'Navigator's Tools',
+ 'Navigator’s Tools, 2 Pouches, Traveler's Clothes, 22 GP',
+ 'Lucky'
+);
+
+-- ADDING NOBLE ---------------------------------------------------------------
+INSERT INTO Backgrounds (
+ Name,
+ Description,
+ Skill_Proficiencies,
+ Tool_Proficiencies,
+ Equipment,
+ Feature
+) VALUES (
+ 'Noble',
+ 'You were raised in a castle, surrounded by wealth, power, and privilege. Your family of minor aristocrats ensured that you received a first-class education, some of which you appreciated and some of which you resented. Your time in the castle, especially the many hours you spent observing your family at court, also taught you a great deal about leadership.',
+ 'History, Persuasion',
+ 'Gaming Set',
+ 'Gaming Set, Fine Clothes, Perfume, 29 GP',
+ 'Skilled'
+);
+
+-- ADDING SAGE ------------------------------------------------------------------
+INSERT INTO Backgrounds (
+ Name,
+ Description,
+ Skill_Proficiencies,
+ Tool_Proficiencies,
+ Equipment,
+ Feature
+) VALUES (
+ 'Sage',
+ 'You spent your formative years traveling between manors and monasteries, performing various odd jobs and services in exchange for access to their libraries. You whiled away many a long evening studying books and scrolls, learning the lore of the multiverse - even the rudiments of magic - and your mind yearns for more.',
+ 'Arcana, History',
+ 'Calligrapher's Supplies',
+ 'Quarterstaff, Calligrapher's Supplies, Book (history), Parchment (8 sheets), Robe, 8 GP',
+ 'Magic Initiate (Wizard)'
+);
+
+-- ADDING SAILOR ---------------------------------------------------------------
+INSERT INTO Backgrounds (
+ Name,
+ Description,
+ Skill_Proficiencies,
+ Tool_Proficiencies,
+ Equipment,
+ Feature
+) VALUES (
+ 'Sailor',
+ 'You lived as a seafarer, wind at your back and decks swaying beneath your feet. You've perched on barstools in more ports of call than you can remember, faced mighty storms, and swapped stories with folk who live beneath the waves.',
+ 'Acrobatics, Perception',
+ 'Navigator's Tools',
+ 'Dagger, Navigator's Tools, Rope, Traveler's Clothes, 20 GP',
+ 'Tavern Brawler'
+);
+
+-- ADDING SCRIBE ------------------------------------------------------------------
+INSERT INTO Backgrounds (
+ Name,
+ Description,
+ Skill_Proficiencies,
+ Tool_Proficiencies,
+ Equipment,
+ Feature
+) VALUES (
+ 'Scribe',
+ 'You spent formative years in a scriptorium, a monastery dedicated to the preservation of knowledge, or a government agency, where you learned to write with a clear hand and produce finely written texts. Perhaps you scribed government documents or copied tomes of literature. You might have some skill as a writer of poetry, narrative, or scholarly research. Above all, you have a careful attention to detail, helping you avoid introducing mistakes to the documents you copy and create.',
+ 'Investigation, Perception',
+ 'Calligrapher's Supplies',
+ 'Calligrapher’s Supplies, Fine Clothes, Lamp, Oil (3 flasks), Parchment (12 sheets), 23 GP',
+ 'Skilled'
+ );
+
+ -- ADDING SOLDIER --------------------------------------------------------------
+ INSERT INTO Backgrounds (
+ Name,
+ Description,
+ Skill_Proficiencies,
+ Tool_Proficiencies,
+ Equipment,
+ Feature
+) VALUES (
+ 'Soldier',
+ 'You began training for war as soon as you reached adulthood and carry precious few memories of life before you took up arms. Battle is in your blood. Sometimes you catch yourself reflexively performing the basic fighting exercises you learned first. Eventually, you put that training to use on the battlefield, protecting the realm by waging war.',
+ 'Athletics, Intimidation',
+ 'Gaming Set',
+ 'Spear, Shortbow, 20 Arrows, Gaming Set, Healer's Kit, Quiver, Traveler’s Clothes, 14 GP',
+ 'Savage Attacker'
+);
+
+-- ADDING WAYFARER --------------------------------------------------------------
+INSERT INTO Backgrounds (
+ Name,
+ Description,
+ Skill_Proficiencies,
+ Tool_Proficiencies,
+ Equipment,
+ Feature
+) VALUES (
+ 'Wayfarer',
+ 'You grew up on the streets surrounded by similarly ill-fated castoffs, a few of them friends and a few of them rivals. You slept where you could and did odd jobs for food. At times, when the hunger became unbearable, you resorted to theft. Still, you never lost your pride and never abandoned hope. Fate is not yet finished with you.',
+ 'Insight, Stealth',
+ 'Thieves' Tools',
+ '2 Daggers, Thieves' Tools, Gaming Set (any), Bedroll, 2 Pouches, Traveler's Clothes, 16 GP',
+ 'Lucky'
+);
