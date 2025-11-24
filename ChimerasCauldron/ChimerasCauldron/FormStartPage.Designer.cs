@@ -124,16 +124,17 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.kitsune_bit_art_shaded1;
-            pictureBox1.Location = new Point(224, 15);
+            pictureBox1.Location = new Point(240, 12);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(83, 93);
+            pictureBox1.Size = new Size(74, 96);
             pictureBox1.TabIndex = 11;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // cBoxModules
             // 
             cBoxModules.FormattingEnabled = true;
-            cBoxModules.Location = new Point(12, 114);
+            cBoxModules.Location = new Point(12, 119);
             cBoxModules.Name = "cBoxModules";
             cBoxModules.Size = new Size(169, 23);
             cBoxModules.TabIndex = 12;

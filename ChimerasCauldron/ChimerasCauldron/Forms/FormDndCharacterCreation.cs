@@ -10,16 +10,38 @@ namespace ChimerasCauldron
 
         /*--CLASS LEVEL VARIABLES-----------------------------------------------------------------------------------------------------------------VARIABLES--*/
         DndCharacter newCharacter;
+        private int contentIndex = 0;
+        private SortedList<int, UserControl> contentControls;
 
         public FormDndCharacterCreation()
         {
             InitializeComponent();
 
             /*--GET THE PANELS LAYOUT TO STAY IN THE CENTER------------------------------------------------------------------------------------------PANELS--*/
-            ConfigurePanelWithMargin(pnlClassSelection, 80, 20);
-            ConfigureCharacterPanelWithMargin();
+            ConfigurePanelWithMargin(pnlContentCreation, 80, 20);
+            ConfigureContentCharacterPanelWithMargin();
             ConfigureButtons();
-            LoadComponents();
+            //LoadComponents();
+
+            // Clear content children and set up the user control array
+            pnl_Content.Controls.Clear();
+            // Set up an array to move through the controls
+            contentControls = new();
+            // Create user control instances and add to list
+            UCClass ucClass = new UCClass();
+            ucClass.Dock = DockStyle.Fill;
+            UCClassFeats ucClassFeats = new UCClassFeats();
+            ucClassFeats.Dock = DockStyle.Fill;
+            UCRaceSpecies ucRace = new UCRaceSpecies();
+            ucRace.Dock = DockStyle.Fill;
+            UCBackground ucBackground = new UCBackground();
+            ucBackground.Dock = DockStyle.Fill;
+            contentControls.Add(0, ucClass);
+            contentControls.Add(1, ucClassFeats);
+            contentControls.Add(2, ucRace);
+            contentControls.Add(3, ucBackground);
+
+            pnl_Content.Controls.Add(contentControls[contentIndex]);
 
             /*--CREATE A NEW PLAYER CHARACTER--------------------------------------------------------------------------------------------------------PLAYER--*/
             newCharacter = new DndCharacter();
@@ -54,27 +76,76 @@ namespace ChimerasCauldron
         }
 
         /*--GET THE CHARACTER PANEL TO STAY TO THE RIGHT THROUGHOUT CREATION----------------------------------------------------------------CHARACTER PANEL--*/
-        private void ConfigureCharacterPanelWithMargin()
+        private void ConfigureContentCharacterPanelWithMargin()
         {
+            //Make sure the panels have the correct parent
+            if (pnl_CurrentCharacter.Parent != pnlContentCreation)
+            {
+                if (pnl_CurrentCharacter.Parent == null)
+                {
+                    pnlContentCreation.Controls.Add(pnl_CurrentCharacter);
+                }
+                else
+                {
+                    var parent = pnl_CurrentCharacter.Parent;
+                    parent.Controls.Remove(pnl_CurrentCharacter);
+                    pnlContentCreation.Controls.Add(pnl_CurrentCharacter);
+                }
+            }
+            //Make sure the panels have the correct parent
+            if (pnl_Content.Parent != pnlContentCreation)
+            {
+                if (pnl_Content.Parent == null)
+                {
+                    pnlContentCreation.Controls.Add(pnl_Content);
+                }
+                else
+                {
+                    var parent = pnl_Content.Parent;
+                    parent.Controls.Remove(pnl_Content);
+                    pnlContentCreation.Controls.Add(pnl_Content);
+                }
+            }
+
             // Set anchor on top right and bottom to stick it to the side of the panel
             pnl_CurrentCharacter.Anchor = AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Bottom;
+            pnl_Content.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Bottom | AnchorStyles.Right;
 
             // Set the initial location and margins
             int topBottomMargin = 20;
-            int sideMargin = 180;
-            int minWidth = 200;
-            int maxWidth = 500;
+            int sideMargin = 20;
 
-            pnl_CurrentCharacter.Location = new Point(this.ClientSize.Width - minWidth - sideMargin, topBottomMargin);
-            pnl_CurrentCharacter.Size = new Size(minWidth, this.ClientSize.Height - (4 * topBottomMargin));
+            // Size for the character panel, leftovers for content selection panel
+            int minWidthCharacter = 200;
+            int maxWidthCharacter = 500;
+
+            pnl_CurrentCharacter.Location = new Point(pnl_CurrentCharacter.Parent.Width - minWidthCharacter - sideMargin, topBottomMargin * 2);
+            pnl_CurrentCharacter.Size = new Size(minWidthCharacter, pnl_CurrentCharacter.Parent.Height - (3 * topBottomMargin));
+
+            pnl_Content.Location = new Point(sideMargin, topBottomMargin * 2);
+            pnl_Content.Size = new Size(pnl_Content.Parent.Width - pnl_CurrentCharacter.Width - (sideMargin * 3), pnl_Content.Parent.Height - (3 * topBottomMargin));
 
             // Handle resizing to maintain margins
             this.Resize += (s, e) =>
             {
-                int currentWidth = Math.Clamp(pnlClassSelection.Width / 5, minWidth, maxWidth);
-                pnl_CurrentCharacter.Location = new Point(this.ClientSize.Width - currentWidth - sideMargin, topBottomMargin);
-                pnl_CurrentCharacter.Size = new Size(currentWidth, this.ClientSize.Height - 4 * topBottomMargin);
+                int currentWidth = Math.Clamp(pnlContentCreation.Width / 5, minWidthCharacter, maxWidthCharacter);
+                pnl_CurrentCharacter.Location = new Point(pnl_CurrentCharacter.Parent.Width - minWidthCharacter - sideMargin, topBottomMargin * 2);
+                pnl_CurrentCharacter.Size = new Size(minWidthCharacter, pnl_CurrentCharacter.Parent.Height - (3 * topBottomMargin));
+                pnl_Content.Location = new Point(sideMargin, topBottomMargin * 2);
+                pnl_Content.Size = new Size(pnl_Content.Parent.Width - pnl_CurrentCharacter.Width - (sideMargin * 3), pnl_Content.Parent.Height - (3 * topBottomMargin));
+                ResizeContentChildren();
             };
+        }
+
+        private void ResizeContentChildren() 
+        {
+            foreach (Control ctrl in pnl_Content.Controls)
+            {
+                if (ctrl is UserControl)
+                {
+                    ctrl.Dock = DockStyle.Fill;
+                }
+            }
         }
 
         /*--SET UP THE BACK AND NEXT BUTTONS----------------------------------------------------------------------------------------------BACK NEXT BUTTONS--*/
@@ -100,7 +171,7 @@ namespace ChimerasCauldron
             btn_Next.Text = ">>>";
         }
 
-        /*--SET UP COMPONENTS THAT USE SQLITE--------------------------------------------------------------------------------------------------------SQLITE--*/
+        /*--SET UP COMPONENTS THAT USE SQLITE--------------------------------------------------------------------------------------------------------SQLITE--
         private void LoadComponents()
         {
             cboxClassSelection.Text = "Choose Class";
@@ -116,7 +187,7 @@ namespace ChimerasCauldron
             {
                 cboxClassSelection.Items.Add(reader.GetString(0));
             }
-        }
+        }*/
 
         /*--BUTTON CLICKS---------------------------------------------------------------------------------------------------------------------BUTTON CLICKS--*/
         private void ShowStartForm(object sender, FormClosedEventArgs e)
@@ -126,9 +197,26 @@ namespace ChimerasCauldron
 
         private void btn_Next_Click(object sender, EventArgs e)
         {
-            Form proficiency = new ProficiencyChoices();
-            proficiency.ShowDialog();
+            int nextIndex = contentIndex + 1;
+            if(nextIndex < contentControls.Count)
+            {
+                contentIndex++;
+                pnl_Content.Controls.Clear();
+                pnl_Content.Controls.Add(contentControls[contentIndex]);
+                ResizeContentChildren();
+            }
         }
-        
+
+        private void btn_Back_Click(object sender, EventArgs e)
+        {
+            int nextIndex = contentIndex - 1;
+            if(nextIndex >= 0)
+            {
+                contentIndex--;
+                pnl_Content.Controls.Clear();
+                pnl_Content.Controls.Add(contentControls[contentIndex]);
+                ResizeContentChildren();
+            }
+        }
     }
 }
