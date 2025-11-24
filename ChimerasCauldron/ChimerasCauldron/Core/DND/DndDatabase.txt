@@ -419,7 +419,7 @@ INSERT INTO Races (
  Name, Description, Speed, Size, Languages, Darkvision, Unique_Traits
 ) VALUES (
  'Human',
- 'Humans are the most adaptable and ambitious people among',
+ 'Humans are the most adaptable and ambitious of all races, thriving in nearly every environment and culture. They are known for their versatility, curiosity, and drive to achieve, often excelling in a wide variety of skills and professions.',
  30,
  'Medium',
  'Common',
