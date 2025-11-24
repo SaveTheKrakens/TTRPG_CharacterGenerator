@@ -35,24 +35,10 @@ CREATE TABLE IF NOT EXISTS PLAYER_CHARACTER (
  FOREIGN KEY (ITEMS_ID) REFERENCES ITEMS(Item_Id)
 );
 
--- Create Races TABLE
-CREATE TABLE IF NOT Exists Races (
- Race_Id INTEGER PRIMARY KEY AUTOINCREMENT,
- Name TEXT NOT NULL,
- Description TEXT NOT NULL,
- Speed INTEGER NOT NULL,
- Size TEXT NOT NULL,
- Ability_Score_Increase TEXT NOT NULL,
- Languages TEXT NOT NULL,
- Darkvision BOOLEAN,
- Unique_Traits TEXT
-);
-
 -- Create Background TABLE
 CREATE TABLE IF NOT EXISTS Backgrounds (
  Name TEXT NOT NULL PRIMARY KEY,
  Description TEXT NOT NULL,
- Ability_Score_Modifier TEXT NOT NULL,
  Skill_Proficiencies TEXT NOT NULL,
  Tool_Proficiencies TEXT,
  Languages TEXT,
@@ -112,14 +98,14 @@ CREATE TABLE IF NOT EXISTS Classes (
 
 -- ADDING ARTIFICER ------------------------------------------------------------
 INSERT INTO Classes (
- Class_Id, 
- Name, 
- Description, 
+ Class_Id,
+ Name,
+ Description,
  Hit_Dice,
- Proficiency, 
+ Proficiency,
  Spellcasting_Ability,
- Prepared_Spells, 
- Prepared_Spells_Change, 
+ Prepared_Spells,
+ Prepared_Spells_Change,
  Cantrip_Progression,
  Equipment
 ) VALUES (
@@ -137,14 +123,14 @@ INSERT INTO Classes (
 
 -- ADDING BARBARIAN ------------------------------------------------------------
 INSERT INTO Classes (
- Class_Id, 
- Name, 
- Description, 
+ Class_Id,
+ Name,
+ Description,
  Hit_Dice,
- Proficiency, 
+ Proficiency,
  Spellcasting_Ability,
- Prepared_Spells, 
- Prepared_Spells_Change, 
+ Prepared_Spells,
+ Prepared_Spells_Change,
  Cantrip_Progression,
  Equipment
 ) VALUES (
@@ -162,14 +148,14 @@ INSERT INTO Classes (
 
 -- BARD ------------------------------------------------------------------------
 INSERT INTO Classes (
- Class_Id, 
- Name, 
- Description, 
+ Class_Id,
+ Name,
+ Description,
  Hit_Dice,
- Proficiency, 
+ Proficiency,
  Spellcasting_Ability,
- Prepared_Spells, 
- Prepared_Spells_Change, 
+ Prepared_Spells,
+ Prepared_Spells_Change,
  Cantrip_Progression,
  Equipment
 ) VALUES (
@@ -183,7 +169,7 @@ INSERT INTO Classes (
  NULL,
  '2,2,2,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4',
  'Leather Armor,2 Daggers, Musical Instrument, Entertainer''s Pack,19GP'
-); 
+);
 
 -- ADDING CLERIC --------------------------------------------------------------
 INSERT INTO Classes (
@@ -434,3 +420,195 @@ INSERT INTO Classes (
  '3,3,3,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,5,5',
  '2 Daggers, Arcane Focus, Robe, Spellbook, Scholar''s Pack, and5 GP'
 );
+
+-- Create Races TABLE
+CREATE TABLE IF NOT Exists Races (
+ Name TEXT NOT NULL PRIMARY KEY,
+ Subraces TEXT,
+ Description TEXT NOT NULL,
+ Speed INTEGER NOT NULL,
+ Size TEXT NOT NULL,
+ Languages TEXT NOT NULL,
+ Darkvision BOOLEAN,
+ Unique_Traits TEXT
+);
+
+-- ADDING DRAGONBORN -----------------------------------------------------------
+INSERT INTO RACES (
+ Name,
+ Subraces,
+ Description,
+ Speed,
+ Size,
+ Ability_Score_Increase,
+ Languages,
+ Darkvision,
+ Unique_Traits
+) VALUES (
+ 'Dragonborn',
+ 'Black, Blue, Brass, Bronze, Copper, Gold, Green, Red, Silver, White',
+ 'Your lineage stems from a dragon progenitor.',
+ 30,
+ 'Medium',
+ 'Common, Draconic',
+ TRUE,
+ 'Breath Weapon, Damage Resistance, Draconic Flight'
+);
+
+-- ADDING DWARF ---------------------------------------------------------------
+INSERT INTO RACES (
+ Name,
+ Description,
+ Speed,
+ Size,
+ Languages,
+ Darkvision,
+ Unique_Traits
+) VALUES (
+ 'Dwarf',
+ 'Dwarves were raised from the earth in the elder days by a deity of the forge.',
+ 30,
+ 'Medium',
+ 'Common, Dwarvish',
+ TRUE,
+ 'Dwarven Resilience, Dwarven Toughness, Stonecunning'
+);
+
+-- ADDING ELF ----------------------------------------------------------------
+INSERT INTO RACES (
+ Name,
+ Subraces,
+ Description,
+ Speed,
+ Size,
+ Languages,
+ Darkvision,
+ Unique_Traits
+) VALUES (
+ 'Elf',
+ 'High Elf, Wood Elf, Drow',
+ 'Elves have pointed ears and lack facial and body hair. They live for around 750 years, and they don’t sleep but instead enter a trance when they need to rest.',
+ 30,
+ 'Medium',
+ 'Common, Elvish',
+ TRUE,
+ 'Fey Ancestry, Trance, Keen Senses'
+);
+-- ADDING GNOME -------------------------------------------------------------
+INSERT INTO RACES (
+ Name,
+ Subraces,
+ Description,
+ Speed,
+ Size,
+ Languages,
+ Darkvision,
+ Unique_Traits
+) VALUES (
+ 'Gnome',
+ 'Forest Gnome, Rock Gnome',
+ 'Gnomes are small humanoids known for their intelligence and affinity for magic and technology.',
+ 30,
+ 'Small',
+ 'Common, Gnomish',
+ TRUE,
+ 'Gnome Cunning'
+);
+-- ADDING GOLIATH ----------------------------------------------------------
+INSERT INTO RACES (
+ Name,
+ Subraces,
+ Description,
+ Speed,
+ Size,
+ Languages,
+ Darkvision,
+ Unique_Traits
+) VALUES (
+ 'Goliath',
+ 'Cloud, Fire, Frost, Hill, Stone, Storm',
+ 'Goliaths are towering humanoids known for their strength and endurance, often found in mountainous regions.',
+ 35,
+ 'Medium',
+ 'Common, Giant',
+ TRUE,
+ 'Large Form, Powerful Build'
+);
+
+-- ADDING HALFLING ----------------------------------------------------------
+INSERT INTO RACES (
+ Name,
+ Description,
+ Speed,
+ Size,
+ Languages,
+ Darkvision,
+ Unique_TraITS
+) VALUES (
+ 'Halfling',
+ 'Halflings are small humanoids known for their cheerful demeanor and nimbleness.',
+ 30,
+ 'Small',
+ 'Common, Halfling',
+ FALSE,
+ 'Luck, Brave, Halfling Nimbleness, Naturally Stealthy'
+);
+
+-- ADDING HUMAN -------------------------------------------------------------
+INSERT INTO RACES (
+ Name,
+ Description,
+ Speed,
+ Size,
+ Languages,
+ Darkvision,
+ Unique_TraITS
+ ) VALUES (
+ 'Human',
+ 'Humans are the most adaptable and ambitious people among',
+ 30,
+ 'Medium',
+ 'Common',
+ FALSE,
+ 'Resourceful, Skillful, Versatile'
+ );
+
+ -- ADDING ORC ----------------------------------------------------------------
+ INSERT INTO RACES (
+ Name,
+ Description,
+ Speed,
+ Size,
+ Languages,
+ Darkvision,
+ Unique_TRAITS
+ ) VALUES (
+ 'Orc',
+ 'Orcs are brutish humanoids known for their strength and aggressive nature.',
+ 30,
+ 'Medium',
+ 'Common, Orcish',
+ TRUE,
+ 'Adrenaline Rush, Relentless Endurance'
+ );
+
+ -- ADDING TIEFLING -----------------------------------------------------------
+ INSERT INTO RACES (
+ Name,
+ Subraces,
+ Description,
+ Speed,
+ Size,
+ Languages,
+ Darkvision,
+ Unique_TraITS
+ ) VALUES (
+ 'Tiefling',
+ 'Abyssal, Infernal, Chthonic',
+ 'Tieflings are humanoids with infernal heritage, often possessing fiendish traits such as horns and tails.',
+ 30,
+ 'Medium',
+ 'Common, Infernal',
+ TRUE,
+ 'Otherworldly Presence'
+ );
