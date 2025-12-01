@@ -88,9 +88,10 @@
             // 
             // tboxDescription
             // 
+            tboxDescription.Dock = DockStyle.Fill;
             tboxDescription.Location = new Point(3, 18);
             tboxDescription.Name = "tboxDescription";
-            tboxDescription.Size = new Size(100, 23);
+            tboxDescription.Size = new Size(80, 23);
             tboxDescription.TabIndex = 1;
             // 
             // UCClass

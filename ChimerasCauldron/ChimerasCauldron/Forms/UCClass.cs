@@ -45,6 +45,9 @@ namespace ChimerasCauldron.Forms
 
             lblClassSelection.Location = new Point(pnlFlowLeft.Location.X + margins, pnlFlowLeft.Location.Y + margins);
             lblClassDescription.Location = new Point(pnlFlowRight.Location.X + margins, pnlFlowRight.Location.Y + margins);
+
+            lblClassSelection.Text = "Class Selection";
+            lblClassDescription.Text = "Class Description;";
         }
 
         private void SetResize(object sender, EventArgs e)
