@@ -29,9 +29,11 @@
         private void InitializeComponent()
         {
             pnlFlowLeft = new FlowLayoutPanel();
-            pnlFlowRight = new FlowLayoutPanel();
             lblClassSelection = new Label();
+            pnlFlowRight = new FlowLayoutPanel();
             lblClassDescription = new Label();
+            cboxClasses = new ComboBox();
+            tboxDescription = new TextBox();
             pnlFlowLeft.SuspendLayout();
             pnlFlowRight.SuspendLayout();
             SuspendLayout();
@@ -40,37 +42,56 @@
             // 
             pnlFlowLeft.BackColor = SystemColors.AppWorkspace;
             pnlFlowLeft.Controls.Add(lblClassSelection);
+            pnlFlowLeft.Controls.Add(cboxClasses);
+            pnlFlowLeft.FlowDirection = FlowDirection.TopDown;
             pnlFlowLeft.Location = new Point(3, 3);
             pnlFlowLeft.Name = "pnlFlowLeft";
             pnlFlowLeft.Size = new Size(192, 399);
             pnlFlowLeft.TabIndex = 0;
-            // 
-            // pnlFlowRight
-            // 
-            pnlFlowRight.BackColor = SystemColors.ControlDarkDark;
-            pnlFlowRight.Controls.Add(lblClassDescription);
-            pnlFlowRight.Location = new Point(215, 3);
-            pnlFlowRight.Name = "pnlFlowRight";
-            pnlFlowRight.Size = new Size(270, 399);
-            pnlFlowRight.TabIndex = 1;
             // 
             // lblClassSelection
             // 
             lblClassSelection.AutoSize = true;
             lblClassSelection.Location = new Point(3, 0);
             lblClassSelection.Name = "lblClassSelection";
-            lblClassSelection.Size = new Size(38, 15);
+            lblClassSelection.Size = new Size(47, 15);
             lblClassSelection.TabIndex = 0;
-            lblClassSelection.Text = "label1";
+            lblClassSelection.Text = "lblClass";
+            // 
+            // pnlFlowRight
+            // 
+            pnlFlowRight.BackColor = SystemColors.ControlDarkDark;
+            pnlFlowRight.Controls.Add(lblClassDescription);
+            pnlFlowRight.Controls.Add(tboxDescription);
+            pnlFlowRight.FlowDirection = FlowDirection.TopDown;
+            pnlFlowRight.Location = new Point(215, 3);
+            pnlFlowRight.Name = "pnlFlowRight";
+            pnlFlowRight.Size = new Size(270, 399);
+            pnlFlowRight.TabIndex = 1;
             // 
             // lblClassDescription
             // 
             lblClassDescription.AutoSize = true;
             lblClassDescription.Location = new Point(3, 0);
             lblClassDescription.Name = "lblClassDescription";
-            lblClassDescription.Size = new Size(38, 15);
+            lblClassDescription.Size = new Size(80, 15);
             lblClassDescription.TabIndex = 0;
-            lblClassDescription.Text = "label2";
+            lblClassDescription.Text = "lblDescription";
+            // 
+            // cboxClasses
+            // 
+            cboxClasses.FormattingEnabled = true;
+            cboxClasses.Location = new Point(3, 18);
+            cboxClasses.Name = "cboxClasses";
+            cboxClasses.Size = new Size(121, 23);
+            cboxClasses.TabIndex = 1;
+            // 
+            // tboxDescription
+            // 
+            tboxDescription.Location = new Point(3, 18);
+            tboxDescription.Name = "tboxDescription";
+            tboxDescription.Size = new Size(100, 23);
+            tboxDescription.TabIndex = 1;
             // 
             // UCClass
             // 
@@ -93,5 +114,7 @@
         private FlowLayoutPanel pnlFlowRight;
         private Label lblClassSelection;
         private Label lblClassDescription;
+        private ComboBox cboxClasses;
+        private TextBox tboxDescription;
     }
 }
